@@ -1,0 +1,17 @@
+# Environment
+.venv/
+__pycache__/
+*.pyc
+
+# CAD / Export outputs
+*.step
+*.stp
+*.stl
+*.3mf
+*.svg
+*.png
+
+# OS / Editor artifacts
+.DS_Store
+.idea/
+.vscode/
