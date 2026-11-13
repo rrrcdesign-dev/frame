@@ -8,8 +8,16 @@ __pycache__/
 *.stp
 *.stl
 *.3mf
+*.glb
+*.xbf
 *.svg
 *.png
+/STEP/
+/STL/
+/GLB/
+/3MF/
+/DXF/
+/tmp/
 
 # OS / Editor artifacts
 .DS_Store
