@@ -28,9 +28,9 @@ SLOT_HEIGHT = 3.0
 SLOT_CORNER_R = 1.0
 
 # Spacing & outer padding inside the visible frame opening
-MEDAL_GAP_X = 25.0
-MEDAL_GAP_Z = 25.0
-FRAME_PADDING = 35.0
+MEDAL_GAP_X = 14.0
+MEDAL_GAP_Z = 14.0
+FRAME_PADDING = 25.0
 
 COL_PITCH = MEDAL_DIAMETER + MEDAL_GAP_X
 MEDAL_UNIT_H = MEDAL_DIAMETER + RIBBON_VISIBLE_H + SLOT_HEIGHT
@@ -48,19 +48,19 @@ LIP_DEPTH = 9.0
 FRAME_OUTER_CORNER_R = 20.0
 FRAME_INNER_CORNER_R = 6.0
 FRAME_OUTER_FRONT_FILLET = 13.5
-CAVITY_CORNER_R = 1.5
-SHEET_CORNER_R = 2.5
+CAVITY_CORNER_R = 6.0
+SHEET_CORNER_R = 7.0
 
 # Corner spline joinery (2 slot inserts per mitred corner)
 SPLINE_THICKNESS = 3.2
 SPLINE_DEPTH = 17.0  # measured inward along 45-deg diagonal from sharp corner
-SPLINE_YS = (15.5, 29.0)
+SPLINE_YS = (16.5, 30.0)
 
 # Stack thicknesses (front to back)
 ACRYLIC_T = 1.5
-FRONT_SPACER_T = 10.0
+FRONT_SPACER_T = 19.0
 MID_BOARD_T = 3.0
-REAR_SPACER_T = 12.0
+REAR_SPACER_T = 5.0
 BACKBOARD_T = 3.0
 
 FRAME_DEPTH = LIP_DEPTH + ACRYLIC_T + FRONT_SPACER_T + MID_BOARD_T + REAR_SPACER_T + BACKBOARD_T
@@ -99,9 +99,9 @@ TURN_BUTTON_W = 9.0
 TURN_BUTTON_T = 2.0
 TURN_BUTTON_SCREW_INSET = FRAME_WALL_W / 2.0  # 6.0 mm from outer edge
 
-TURN_BUTTON_TOP_BOTTOM_XS = (-140.0, 0.0, 140.0)
-TURN_BUTTON_SIDE_ZS = (110.0, 365.0)
-HANGER_Z = FRAME_OUTER_H * (2.0 / 3.0)  # 294.0 mm (top third)
+TURN_BUTTON_TOP_BOTTOM_XS = (-110.0, 110.0)
+TURN_BUTTON_SIDE_ZS = (FRAME_OUTER_H / 2.0,)
+HANGER_Z = FRAME_OUTER_H * (2.0 / 3.0)  # top third
 
 
 def medal_center(row: int, col: int) -> tuple[float, float]:

@@ -174,7 +174,7 @@ def wall_hanger():
 
 @model
 def rear_hardware():
-    """10 heavy-duty turn buttons and 2 left/right metal wall-hanging brackets on the rear face."""
+    """6 heavy-duty turn buttons and 2 left/right metal wall-hanging brackets on the rear face."""
     tb_proto = turn_button().shape
     hanger_proto = wall_hanger().shape
 
