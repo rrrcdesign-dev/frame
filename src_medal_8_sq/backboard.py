@@ -9,12 +9,15 @@ from lib.materials import apply_backboard_mdf
 
 @model
 def backboard():
-    """3 mm MDF backboard recessed 3 mm from the back face of the hardwood frame."""
+    """3 mm MDF backboard recessed behind the 1.5 mm locking kerf and 3.0 mm solid back lip."""
     plane = bd.Plane(origin=(0.0, Y_BACKBOARD_START, 0.0), x_dir=(1, 0, 0), z_dir=(0, -1, 0))
     with bd.BuildPart() as part:
         with bd.BuildSketch(plane):
             with bd.Locations((0.0, FRAME_OUTER_H / 2.0)):
-                bd.RectangleRounded(BACKBOARD_W, BACKBOARD_H, SHEET_CORNER_R)
+                if SHEET_CORNER_R > 0.0:
+                    bd.RectangleRounded(BACKBOARD_W, BACKBOARD_H, SHEET_CORNER_R)
+                else:
+                    bd.Rectangle(BACKBOARD_W, BACKBOARD_H)
         bd.extrude(amount=-BACKBOARD_T)
     board = part.part
     board.label = "backboard"

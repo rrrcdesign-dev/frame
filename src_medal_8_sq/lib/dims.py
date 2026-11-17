@@ -40,29 +40,31 @@ OPEN_W = MEDAL_COLS * MEDAL_DIAMETER + (MEDAL_COLS - 1) * MEDAL_GAP_X + 2.0 * FR
 OPEN_H = MEDAL_ROWS * MEDAL_UNIT_H + (MEDAL_ROWS - 1) * MEDAL_GAP_Z + 2.0 * FRAME_PADDING
 
 # Hardwood moulding & rabbet geometry
-# 28 mm total front face width = 16 mm outer hardwood wall + 6 mm spacer (22 mm) + 6 mm lip overhang
-FRAME_FACE_W = 28.0
-FRAME_WALL_W = 16.0
-SPACER_WALL_W = 6.0
-LIP_DEPTH = 9.0
-FRAME_OUTER_CORNER_R = 0.0
-FRAME_INNER_CORNER_R = 6.0
-FRAME_OUTER_FRONT_FILLET = 13.5
-CAVITY_CORNER_R = 6.0
-SHEET_CORNER_R = 7.0
+# 20 mm total front face width = 12 mm outer hardwood wall + 4 mm spacer (16 mm) + 4 mm lip overhang
+FRAME_FACE_W = 20.0
+FRAME_WALL_W = 12.0
+SPACER_WALL_W = 4.0
+LIP_DEPTH = 3.0
+FRAME_OUTER_CORNER_R = 12.0
+FRAME_INNER_CORNER_R = 0.0
+FRAME_OUTER_FRONT_FILLET = 0.0
+CAVITY_CORNER_R = 0.0
+SHEET_CORNER_R = 0.0
 
 # Corner spline joinery (2 slot inserts per mitred corner)
 SPLINE_THICKNESS = 3.2
-SPLINE_DEPTH = 17.0  # measured inward along 45-deg diagonal from sharp corner
-SPLINE_YS = (16.5, 30.0)
+SPLINE_DEPTH = 13.0  # measured inward along 45-deg diagonal from sharp corner (clears 12 mm wall)
+SPLINE_YS = (10.0, 22.0)
 
 # Stack thicknesses (front to back)
 ACRYLIC_T = 1.5
 FRONT_SPACER_T = 15.0
 MID_BOARD_T = 3.0
-REAR_SPACER_T = 5.0
+REAR_SPACER_T = 3.0  # 3 mm empty rear space behind mid-board (rear_spacer part omitted)
 BACKBOARD_T = 3.0
-BACKBOARD_REAR_INSET = 3.0  # recess backboard 3 mm inward from back face of frame
+KERF_H = 1.5
+BACK_LIP_T = 3.0
+BACKBOARD_REAR_INSET = KERF_H + BACK_LIP_T  # 1.5 mm kerf + 3.0 mm solid back lip
 
 FRAME_DEPTH = LIP_DEPTH + ACRYLIC_T + FRONT_SPACER_T + MID_BOARD_T + REAR_SPACER_T + BACKBOARD_T + BACKBOARD_REAR_INSET
 
@@ -96,14 +98,13 @@ Y_KERF_START = Y_BACKBOARD_END
 Y_BACK = FRAME_DEPTH
 
 # Internal frame locking kerf (receives backboard-mounted turn locks)
-KERF_DEPTH = 4.0
-KERF_H = 1.5
+KERF_DEPTH = 3.0
 
 # Turn locks & D-ring hangers mounted on the recessed backboard
 TURN_BUTTON_LEN = 21.0
 TURN_BUTTON_W = 9.0
 TURN_BUTTON_T = 1.2
-TURN_LOCK_EDGE_INSET = 18.0  # pivot inset inward from backboard edge (3.0 mm tip reach into 4.0 mm kerf)
+TURN_LOCK_EDGE_INSET = 18.5  # pivot inset inward from backboard edge (2.5 mm reach into 3.0 mm kerf)
 HANGER_BACKBOARD_INSET = 22.0  # D-ring strap center inset inward from backboard left/right edge
 
 TURN_BUTTON_TOP_BOTTOM_XS = (-110.0, 110.0)

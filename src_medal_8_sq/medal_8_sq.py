@@ -10,7 +10,7 @@ from hardware import rear_hardware
 from lib.dims import FRAME_OUTER_H, FRAME_OUTER_W
 from medals import medal_set
 from mid_board import mid_board
-from spacers import front_spacer, rear_spacer
+from spacers import front_spacer
 
 
 @model
@@ -21,7 +21,6 @@ def medal_8_sq():
     f_spacer = front_spacer().shape
     medals = medal_set().shape
     mid = mid_board().shape
-    r_spacer = rear_spacer().shape
     back = backboard().shape
     hw = rear_hardware().shape
 
@@ -32,7 +31,6 @@ def medal_8_sq():
             f_spacer,
             medals,
             mid,
-            r_spacer,
             back,
             hw,
         ],

@@ -27,7 +27,10 @@ def mid_board():
     with bd.BuildPart() as part:
         with bd.BuildSketch(board_plane):
             with bd.Locations((0.0, FRAME_OUTER_H / 2.0)):
-                bd.RectangleRounded(SHEET_W, SHEET_H, SHEET_CORNER_R)
+                if SHEET_CORNER_R > 0.0:
+                    bd.RectangleRounded(SHEET_W, SHEET_H, SHEET_CORNER_R)
+                else:
+                    bd.Rectangle(SHEET_W, SHEET_H)
             for row in range(MEDAL_ROWS):
                 for col in range(MEDAL_COLS):
                     x, z = slot_center(row, col)

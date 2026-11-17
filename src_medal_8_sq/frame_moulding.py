@@ -39,50 +39,47 @@ def _build_unslotted_frame_envelope() -> bd.Shape:
                     bd.Rectangle(FRAME_OUTER_W, FRAME_OUTER_H)
         bd.extrude(amount=-FRAME_DEPTH)
 
-        front_edges = fp.part.faces().sort_by(bd.Axis.Y)[0].outer_wire().edges()
-        bd.fillet(front_edges, radius=FRAME_OUTER_FRONT_FILLET)
+        if FRAME_OUTER_FRONT_FILLET > 0.0:
+            front_edges = fp.part.faces().sort_by(bd.Axis.Y)[0].outer_wire().edges()
+            bd.fillet(front_edges, radius=FRAME_OUTER_FRONT_FILLET)
 
         # Rear rabbet cavity
         rab_plane = bd.Plane(origin=(0.0, LIP_DEPTH, 0.0), x_dir=(1, 0, 0), z_dir=(0, -1, 0))
         with bd.BuildSketch(rab_plane):
             with bd.Locations((0.0, FRAME_OUTER_H / 2.0)):
-                bd.RectangleRounded(CAVITY_W, CAVITY_H, CAVITY_CORNER_R)
+                if CAVITY_CORNER_R > 0.0:
+                    bd.RectangleRounded(CAVITY_W, CAVITY_H, CAVITY_CORNER_R)
+                else:
+                    bd.Rectangle(CAVITY_W, CAVITY_H)
         bd.extrude(amount=-(FRAME_DEPTH - LIP_DEPTH + 2.0), mode=bd.Mode.SUBTRACT)
 
         # Internal locking kerf groove behind the 3 mm recessed backboard
         kerf_plane = bd.Plane(origin=(0.0, Y_KERF_START, 0.0), x_dir=(1, 0, 0), z_dir=(0, -1, 0))
         with bd.BuildSketch(kerf_plane):
             with bd.Locations((0.0, FRAME_OUTER_H / 2.0)):
-                bd.RectangleRounded(
-                    CAVITY_W + 2.0 * KERF_DEPTH,
-                    CAVITY_H + 2.0 * KERF_DEPTH,
-                    CAVITY_CORNER_R + KERF_DEPTH,
-                )
+                if CAVITY_CORNER_R > 0.0:
+                    bd.RectangleRounded(
+                        CAVITY_W + 2.0 * KERF_DEPTH,
+                        CAVITY_H + 2.0 * KERF_DEPTH,
+                        CAVITY_CORNER_R + KERF_DEPTH,
+                    )
+                else:
+                    bd.Rectangle(
+                        CAVITY_W + 2.0 * KERF_DEPTH,
+                        CAVITY_H + 2.0 * KERF_DEPTH,
+                    )
         bd.extrude(amount=-KERF_H, mode=bd.Mode.SUBTRACT)
 
         # Viewing opening through front lip
         with bd.BuildSketch(p_xz):
             with bd.Locations((0.0, FRAME_OUTER_H / 2.0)):
-                bd.RectangleRounded(OPEN_W, OPEN_H, FRAME_INNER_CORNER_R)
+                if FRAME_INNER_CORNER_R > 0.0:
+                    bd.RectangleRounded(OPEN_W, OPEN_H, FRAME_INNER_CORNER_R)
+                else:
+                    bd.Rectangle(OPEN_W, OPEN_H)
         bd.extrude(amount=-(LIP_DEPTH + 2.0), mode=bd.Mode.SUBTRACT)
 
-    # Inset curved router groove around inside of front lip (9.5 mm wide, zero drop at Y=0 + concave cove to Y=5.8)
-    with bd.BuildSketch(p_xz) as path_sk:
-        with bd.Locations((0.0, FRAME_OUTER_H / 2.0)):
-            bd.RectangleRounded(OPEN_W, OPEN_H, FRAME_INNER_CORNER_R)
-    path_wire = path_sk.sketch.faces()[0].outer_wire()
-    loc0 = path_wire ^ 0
-
-    with bd.BuildPart() as router_cutter:
-        with bd.BuildSketch(loc0):
-            with bd.BuildLine():
-                bd.Polyline((1.0, -1.0), (-9.5, -1.0), (-9.5, 0.0))
-                bd.ThreePointArc((-9.5, 0.0), (-5.8, 3.8), (1.0, 5.8))
-                bd.Line((1.0, 5.8), (1.0, -1.0))
-            bd.make_face()
-        bd.sweep(path=path_wire)
-
-    return fp.part - router_cutter.part
+    return fp.part
 
 
 def _corner_spline_blanks() -> list[tuple[str, bd.Shape]]:

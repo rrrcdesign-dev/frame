@@ -1242,3 +1242,716 @@ Other open documents:
 
 ---
 
+### Assistant (2026-11-15T10:03:36Z)
+
+Committed and pushed all CAD model variants and the conversation log to GitHub:
+
+- **Repository**: [https://github.com/rrrcdesign-dev/frame](https://github.com/rrrcdesign-dev/frame)
+- **Commit**: `514b72a` (`main` branch, `48 files changed`)
+- **Uploaded Directories & Files**:
+  - [src/](file:///Users/rmac/AntiGravity/Frame/src) — Updated 12-medal base frame (`14 mm` medal gaps, `25 mm` padding, `19 mm` mitred front spacer, `5 mm` straight rear spacer, `6` turn buttons, `CAVITY_CORNER_R = 6.0 mm`)
+  - [src_back2/](file:///Users/rmac/AntiGravity/Frame/src_back2) — `medal_frame_back_2` (`15 mm` front spacer, `3 mm` recessed backboard, internal locking kerf, backboard-mounted hardware, light birch mid-board)
+  - [src_corner2/](file:///Users/rmac/AntiGravity/Frame/src_corner2) — `medal_corner_2` (`90°` outer corners variant of `back2`)
+  - [src_8_medal/](file:///Users/rmac/AntiGravity/Frame/src_8_medal) — `8_medal` (`2 × 4` grid, `440 × 302 × 39.5 mm`)
+  - [src_medal_8_sq/](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq) — `medal_8_sq` (`2 × 4` grid with `90°` outer corners and square-cut butt-jointed front spacer)
+  - [docs/conversation.md](file:///Users/rmac/AntiGravity/Frame/docs/conversation.md) — Full design, DFM, cost analysis, 1688 keywords, and Chinese supplier inquiry log
+
+*(Note: Generated `exports/*.step` files remain local per [.gitignore](file:///Users/rmac/AntiGravity/Frame/.gitignore).)*
+
+---
+
+## User (2026-11-17T07:42:27Z)
+
+<USER_REQUEST>
+open viewer
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T17:42:27+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 12
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/spacers.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-17T07:42:59Z)
+
+Opened the `cad-server` viewer for [src_medal_8_sq/medal_8_sq.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/medal_8_sq.py) in your browser:
+
+- **Viewer URL**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948501364.uv0-ffm8t1xZBPJBr0xISuqx-dhfZYrf_Yw6WzvwsIg](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948501364.uv0-ffm8t1xZBPJBr0xISuqx-dhfZYrf_Yw6WzvwsIg)
+
+*(Let me know if you want to open one of the other variants instead: `src/medal_frame.py`, `src_back2/medal_frame_back_2.py`, `src_corner2/medal_corner_2.py`, or `src_8_medal/8_medal.py`.)*
+
+---
+
+## User (2026-11-17T07:44:52Z)
+
+<USER_REQUEST>
+to reduce the thickness and cost, remove the round corners to the front edge, and reduce the front space to 16mm, find any other way to reduce the thickness, i need to trim down to 33mm
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T17:44:52+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 12
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/spacers.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Gemini 4 Hydrogen (High) to Orchestrator (Argon). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+
+---
+
+### Assistant (2026-11-17T07:49:08Z)
+
+Updated `medal_8_sq` to **`33.0 mm`** frame depth (`4.5 mm` lip + `1.5 mm` acrylic + `16.0 mm` front spacer + `3.0 mm` mid-board + `2.0 mm` rear spacer + `3.0 mm` backboard + `3.0 mm` rear inset) with crisp square front outer edges. Waiting for the full interference check and STEP re-export to complete.
+Updated **`medal_8_sq`** in `src_medal_8_sq/` to **`33.0 mm` frame depth** (`440 × 33.0 × 302 mm`), removed the rounded front outer-edge fillet, verified zero collisions, re-exported all STEP files, and opened the viewer:
+
+### Summary of Changes (`39.5 mm` → `33.0 mm`)
+- **[src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L47-L67)**:
+  - **`FRAME_OUTER_FRONT_FILLET`**: `13.5 mm` → **`0.0 mm`** (crisp square front outer edges)
+  - **`LIP_DEPTH`**: `9.0 mm` → **`4.5 mm`** (`-4.5 mm`)
+  - **`FRONT_SPACER_T`**: `15.0 mm` → **`16.0 mm`** (`+1.0 mm`, giving `11.0 mm` front air gap before the `5.0 mm` medals)
+  - **`REAR_SPACER_T`**: `5.0 mm` → **`2.0 mm`** (`-3.0 mm`)
+  - **`SPLINE_YS`**: `(16.5, 30.0)` → **`(10.0, 22.0)`** (centered cleanly between the `4.5 mm` lip and `30.0 mm` locking kerf)
+  - **Resulting Stack (`33.0 mm`)**: `4.5` (lip) + `1.5` (acrylic) + `16.0` (front spacer) + `3.0` (mid-board) + `2.0` (rear spacer) + `3.0` (backboard) + `3.0` (rear inset) = **`33.0 mm`**
+- **[src_medal_8_sq/frame_moulding.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/frame_moulding.py#L42-L85)**: Guarded front fillet for `0.0 mm` and shallowed the inset inner cove depth from `5.8 mm` to `2.2 mm` (leaving `2.3 mm` solid lip).
+- **[src_medal_8_sq/medals.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/medals.py#L72-L75)**: Tightened rear ribbon fold (`y_back_drop = 3.85`, `r_mid = 1.3`) so it clears the `2.0 mm` rear cavity with `0.55 mm` gap to the backboard.
+- **[src_medal_8_sq/spacers.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/spacers.py#L90-L99)**: Updated docstrings to match `16 mm` / `2 mm`.
+
+### Verification, Exports & Viewer
+- **Solids & Interference**: `59 parts`, `0 invalid`, **`0.000000 mm³`** overlap across `hardwood_frame`, `acrylic_cover`, `front_spacer`, `medals`, `mid_board`, `rear_spacer`, `backboard`, and `rear_hardware` (`medals & mid_board = 0.000000 mm³`, `medals & backboard = 0.000000 mm³`).
+- **Updated STEP Exports (without medals)**: [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) and `exports/medal_8_sq_parts/*.step`.
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948501724.LS8rKZB7n0NCSdgfWmoZdjfD8V3S3FRA5MtWtif3GSQ](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948501724.LS8rKZB7n0NCSdgfWmoZdjfD8V3S3FRA5MtWtif3GSQ)
+
+---
+
+### Assistant (2026-11-17T07:49:41Z)
+
+Updated **`medal_8_sq`** in `src_medal_8_sq/` to **`33.0 mm` frame depth** (`440 × 33.0 × 302 mm`), removed the rounded front outer-edge fillet, verified zero collisions across all parts, re-exported all STEP files, and opened the viewer:
+
+### Summary of Changes (`39.5 mm` → `33.0 mm`)
+- **[src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L47-L67)**:
+  - **`FRAME_OUTER_FRONT_FILLET`**: `13.5 mm` → **`0.0 mm`** (crisp square front outer edges)
+  - **`LIP_DEPTH`**: `9.0 mm` → **`4.5 mm`** (`-4.5 mm`)
+  - **`FRONT_SPACER_T`**: `15.0 mm` → **`16.0 mm`** (`+1.0 mm`, giving `11.0 mm` front air gap before the `5.0 mm` medals)
+  - **`REAR_SPACER_T`**: `5.0 mm` → **`2.0 mm`** (`-3.0 mm`)
+  - **`SPLINE_YS`**: `(16.5, 30.0)` → **`(10.0, 22.0)`** (centered cleanly between the `4.5 mm` lip and `30.0 mm` locking kerf)
+  - **Resulting Stack (`33.0 mm`)**: `4.5` (lip) + `1.5` (acrylic) + `16.0` (front spacer) + `3.0` (mid-board) + `2.0` (rear spacer) + `3.0` (backboard) + `3.0` (rear inset) = **`33.0 mm`**
+- **[src_medal_8_sq/frame_moulding.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/frame_moulding.py#L42-L85)**: Guarded front fillet for `0.0 mm` and shallowed the inset inner cove depth from `5.8 mm` to `2.2 mm` (leaving `2.3 mm` solid lip).
+- **[src_medal_8_sq/medals.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/medals.py#L72-L75)**: Tightened rear ribbon fold (`y_back_drop = 3.85`, `r_mid = 1.3`) so it clears the `2.0 mm` rear cavity with `0.55 mm` gap to the backboard (`Y = 26.45` vs `27.00 mm`).
+- **[src_medal_8_sq/spacers.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/spacers.py#L90-L99)**: Updated docstrings to match `16 mm` / `2 mm`.
+
+### Verification, Exports & Viewer
+- **Solids & Layer Stack (`59` total solids, `0` invalid)**:
+  - `hardwood_frame`: `Y = [0.00, 33.00]`
+  - `acrylic_cover`: `Y = [4.50, 6.00]`
+  - `front_spacer`: `Y = [6.00, 22.00]`
+  - `medals`: `Y = [17.00, 26.45]`
+  - `mid_board`: `Y = [22.00, 25.00]`
+  - `rear_spacer`: `Y = [25.00, 27.00]`
+  - `backboard`: `Y = [27.00, 30.00]`
+  - `rear_hardware`: `Y = [30.00, 38.38]` (`440 × 38.67 × 302 mm` total bounds)
+- **Interference**: **`0.000000 mm³`** overlap across `hardwood_frame` vs. every layer/hardware and `medals` vs. every layer.
+- **Updated STEP Exports (without medals)**: [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) (`1.90 MB`) and `exports/medal_8_sq_parts/*.step`.
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948501724.LS8rKZB7n0NCSdgfWmoZdjfD8V3S3FRA5MtWtif3GSQ](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948501724.LS8rKZB7n0NCSdgfWmoZdjfD8V3S3FRA5MtWtif3GSQ)
+
+---
+
+## User (2026-11-17T07:50:56Z)
+
+<USER_REQUEST>
+the frame top inset routering also can be removed and back to simple right angle
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T17:50:56+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 12
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/medals.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-17T07:52:17Z)
+
+Removed the front inset curved router groove and squared the inner viewing opening corners to `90°` in `medal_8_sq`:
+
+### Changes Made
+- **[src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L48-L49)**: Set `FRAME_INNER_CORNER_R = 0.0` (matching `FRAME_OUTER_CORNER_R = 0.0` for crisp 90° corners inside and out).
+- **[src_medal_8_sq/frame_moulding.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/frame_moulding.py#L64-L74)**: Updated the front viewing opening to use `bd.Rectangle(OPEN_W, OPEN_H)` when `FRAME_INNER_CORNER_R <= 0.0` and removed the `router_cutter` inset cove sweep.
+
+### Verification, Exports & Viewer
+- **Solids & Bounds**: `hardwood_frame` has `12` solids, `0` invalid (`440 × 33 × 302 mm`); full assembly `59` parts, `440 × 38.67 × 302 mm`.
+- **Updated STEP Exports**: [hardwood_frame.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_parts/hardwood_frame.step) (`593.7 KB`) and [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) (`1.69 MB`).
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948501922.5QP97pMVk8A_gNJtIGYjZv-rRoZWhQn0RHhedlC7KF8](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948501922.5QP97pMVk8A_gNJtIGYjZv-rRoZWhQn0RHhedlC7KF8)
+
+---
+
+## User (2026-11-17T07:57:31Z)
+
+<USER_REQUEST>
+the backboard and the inside of the frame can change back to right angle. to this locking system it need to trim a inset line on the frame, is it easy and cheap? if it need to make a special knife mould then please suggest another way to hold the backboard
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T17:57:31+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 12
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/medals.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-17T07:59:43Z)
+
+Updated **`medal_8_sq`** in `src_medal_8_sq/` so the rabbet cavity, backboard, acrylic cover, mid-board, and spacers are all **`90°` right angles** (`0.0 mm` corner radii), re-exported the STEP files, and opened the viewer:
+
+### 1. Model Updates (`90°` Internal Corners)
+- **[src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L51-L52)**: Set `CAVITY_CORNER_R = 0.0` and `SHEET_CORNER_R = 0.0`.
+- **[src_medal_8_sq/frame_moulding.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/frame_moulding.py#L46-L70)**: Switched the rabbet cavity and locking kerf sketches to `bd.Rectangle(...)` when `CAVITY_CORNER_R <= 0.0`.
+- **[src_medal_8_sq/acrylic_cover.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py#L16-L20)**, **[src_medal_8_sq/mid_board.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/mid_board.py#L29-L33)**, **[src_medal_8_sq/backboard.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/backboard.py#L16-L20)**: Switched sheets to `bd.Rectangle(...)` when `SHEET_CORNER_R <= 0.0`.
+- **[src_medal_8_sq/spacers.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/spacers.py#L20-L44)**: Made `front_spacer` pure square-cut rectangular `bd.Box` bars when `SHEET_CORNER_R <= 0.0`.
+- **Verification & Exports**: `59` parts, `0` invalid solids, **`0.000000 mm³`** overlap across all layers/hardware; updated [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) (`1.52 MB`) and `exports/medal_8_sq_parts/*.step`.
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948502361.haX4_3xCqF8rCjCtc5X6tR-hO5CWpVT_FI8Pzd30iv4](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948502361.haX4_3xCqF8rCjCtc5X6tR-hO5CWpVT_FI8Pzd30iv4)
+
+---
+
+### 2. Is the Locking Kerf Easy & Cheap? (No Special Knife Mould Needed)
+
+* **No custom knife mould (`定制成型刀`) is required.**
+* Because your frame now has **all-90° straight rails**, factories cut the rabbet and the `1.5 mm` locking kerf **on the straight mouldings *before* cutting the 45° miters**:
+  1. Rip/plane the straight walnut strips to `28 × 33 mm`.
+  2. Cut the rabbet (`12 × 28.5 mm`) on a table saw / spindle shaper (`立铣`).
+  3. Run the straight strips once past an **off-the-shelf `1.5 mm` slotting saw blade or disc slot cutter (`1.5mm开槽锯片/三面刃铣刀`, ~¥20–¥50)** to cut the `4.0 × 1.5 mm` kerf along the straight inner wall.
+  4. Chop the 45° miters and spline-glue the frame.
+* Cost impact on 1688 at production volume is very small (**~¥1–¥2 per frame**).
+
+---
+
+### 3. Even Simpler / Cheaper Alternatives to Hold a `3 mm` Recessed Backboard (Zero Kerf Needed)
+
+If you want to skip the kerf completely and cut hardware/riveting cost further:
+
+1. **Stepped / Offset Turn Buttons (`Z型台阶旋转扣`) screwed to the frame back face:**
+   * Off-the-shelf stamped `Z`-bent metal turn clips (`3 mm` step-down offset) screw onto the back of the walnut frame (`Y = 33.0 mm`) and reach `3 mm` forward into the recess to press the backboard at `Y = 30.0 mm`.
+   * **Pros:** Zero kerf in wood, zero riveting on 3 mm MDF, easy repeatable opening/closing, forgives stack tolerances.
+2. **Pneumatic Flexible Framer's Points (`相框弹片 / 折弯枪钉`):**
+   * Shot directly into the inside rabbet wall behind the `3 mm` recessed backboard with a framing point gun.
+   * **Pros:** Cheapest option (~¥0.10/frame), zero kerf, zero turn-locks/rivets, and keeps the backboard cleanly recessed 3 mm from the wall (just bend the tabs up with a screwdriver to swap medals).
+3. **Localized Plunge Slots (`6` short biscuit/slot cuts) instead of a full perimeter kerf:**
+   * Keep your current backboard-mounted turn locks, but only plunge 6 short slots where the locks sit instead of grooving all 4 edges end-to-end. *(Though on straight rails prior to mitering, running a full-length saw kerf is actually faster than 6 separate plunges.)*
+
+---
+
+## User (2026-11-17T08:05:03Z)
+
+<USER_REQUEST>
+the thickness of the timber to hold the backboard, will it too thin?
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T18:05:03+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 12
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Orchestrator (Argon) to Gemini 4 Argon (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+
+---
+
+### Assistant (2026-11-17T08:05:04Z)
+
+**Yes—your instinct is spot on. At the current dimensions, that timber lip is too thin (`1.5 mm`) and risky for production.**
+
+---
+
+### 1. Why the Current `1.5 mm` Lip Is Too Thin
+
+In `medal_8_sq` (`FRAME_DEPTH = 33.0 mm`):
+* The backboard ends at `Y = 30.0 mm` (`3.0 mm` inset from the back face at `33.0 mm`).
+* The locking kerf is **`1.5 mm` wide (`Y = 30.0` to `31.5 mm`)** and **`4.0 mm` deep**.
+* That leaves only **`1.5 mm` of walnut (`Y = 31.5` to `33.0 mm`)** at the very back edge.
+
+**Two problems with a `1.5 mm × 4.0 mm` wood lip:**
+1. **Easy to chip along the short grain:** `1.5 mm` of hardwood projecting `4.0 mm` will easily splinter during saw-slotting, sanding, or when turning the metal locks. (In woodworking, a rabbet/kerf lip in walnut should be at least **`3.5–5.0 mm` thick**, and only `2.5–3.0 mm` deep.)
+2. **Wall-hanging load:** Because the **D-ring hangers are currently mounted on the backboard**, the **entire weight of the solid walnut frame** pulls forward against those 6 turn locks and that `1.5 mm` wood lip when hung on the wall.
+
+---
+
+### 2. Three Ways to Fix It (While Keeping `33.0 mm` Total Depth)
+
+#### Option A — Best & Strongest: Put Hangers on the Walnut Frame + Use Frame-Mounted Turn Buttons (No Kerf)
+* **How it works:** Remove the kerf completely (`100%` solid `16 mm` walnut wall). Mount the 6 turn buttons and 2 hangers directly onto the `16 mm` walnut frame wall.
+* **What about wall clearance?**
+  * Keep a **`2.0–3.0 mm` recess** for the backboard so the turn buttons sit flush inside the recess, OR
+  * Mill **2 recessed keyhole slots (`暗挂葫芦孔`)** into the back of the `16 mm` walnut stiles so the frame hangs completely flush against the wall with zero protruding hardware.
+
+#### Option B — Keep the Kerf, But Thicken the Rear Lip to `3.5–4.0 mm` (Keep `33.0 mm` Total Depth)
+* Reduce `FRONT_SPACER_T` slightly from `16.0 mm` to **`13.5 mm`** (still leaves `8.5 mm` clear gap in front of the `5 mm` medals).
+* That gives `5.5 mm` behind the backboard: `1.5 mm` kerf + **`4.0 mm` solid walnut rear lip** (and shallow `KERF_DEPTH` from `4.0 mm` to `2.5 mm` so it is stubby and strong).
+* Move the **wall hangers onto the walnut frame** so the kerf only holds the lightweight backboard/medals, not the weight of the walnut frame.
+
+#### Option C — Pneumatic Framer's Flex Points (`相框弹片枪钉`) + Hangers on Frame
+* Keep the `3.0 mm` backboard recess, remove the kerf, and shoot flexible framer's points into the inside rabbet wall behind the backboard—zero wood-thinning kerf, zero rivets on the 3 mm MDF, and lowest cost.
+
+---
+
+Which option would you like to apply to `medal_8_sq`?
+
+---
+
+## User (2026-11-17T08:08:25Z)
+
+<USER_REQUEST>
+remove the back spacer, reduce the front lip to 3mm, increase the backlip to 3mm
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T18:08:25+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 12
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+## User (2026-11-17T08:08:35Z)
+
+<USER_REQUEST>
+remove the back spacer, reduce the front lip to 3mm, increase the backlip to 3mm
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T18:08:35+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 12
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Gemini 4 Argon (High) to Gemini 4 Hydrogen (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+
+---
+
+### Assistant (2026-11-17T08:09:50Z)
+
+Rebuilt **`medal_8_sq`** with no rear spacer, a `3.0 mm` front lip, and a `3.0 mm` back lip behind the locking kerf (`FRAME_DEPTH = 31.0 mm`). Waiting for the remaining interference checks and STEP export to finish.
+Updated **`medal_8_sq`** in `src_medal_8_sq/` with the back spacer removed, `3.0 mm` front lip, and `3.0 mm` solid back lip behind the locking kerf (`FRAME_DEPTH = 31.0 mm`):
+
+### Summary of Changes
+- **[src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L47-L106)**:
+  - **`LIP_DEPTH`**: `4.5 mm` → **`3.0 mm`**
+  - **`REAR_SPACER_T`**: `2.0 mm` → **`0.0 mm`** (back spacer removed)
+  - **`KERF_H` / `BACK_LIP_T`**: `1.5 mm` kerf + **`3.0 mm`** back lip (`BACKBOARD_REAR_INSET = 4.5 mm`), with `KERF_DEPTH = 3.0 mm` and `TURN_LOCK_EDGE_INSET = 18.5 mm` (`2.2 mm` engagement inside the `3.0 mm` kerf)
+  - **`SPLINE_YS`**: `(10.0, 22.0)` → **`(9.0, 20.5)`**
+  - **Resulting Stack (`31.0 mm`)**: `3.0` (front lip) + `1.5` (acrylic) + `16.0` (front spacer) + `3.0` (mid-board) + `3.0` (backboard) + `1.5` (kerf) + `3.0` (back lip) = **`31.0 mm`**
+- **[src_medal_8_sq/medal_8_sq.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/medal_8_sq.py#L12-L38)**: Removed `rear_spacer` from the assembly.
+- **[src_medal_8_sq/medals.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/medals.py#L64-L103)**: Terminated `ribbon()` flush with the back face of `mid_board` (`Y = 23.50 mm`).
+- **[src_medal_8_sq/backboard.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/backboard.py#L10-L12)**: Updated docstring.
+
+### Layer Stack (`55` parts, `0` invalid)
+- `hardwood_frame`: `Y = [0.00, 31.00]`
+- `acrylic_cover`: `Y = [3.00, 4.50]`
+- `front_spacer`: `Y = [4.50, 20.50]`
+- `medals`: `Y = [15.50, 23.50]` (`11.00 mm` front air gap behind acrylic)
+- `mid_board`: `Y = [20.50, 23.50]`
+- `backboard`: `Y = [23.50, 26.50]` (`4.50 mm` inset from frame back face)
+- `rear_hardware`: `Y = [26.50, 34.88]`
+
+Let me check `task-505` status to confirm the remaining collision checks and open the viewer.
+
+---
+
+### Assistant (2026-11-17T08:10:12Z)
+
+All remaining verification checks completed and the updated viewer is open:
+
+- **Interference Check**: **`0.000000 mm³`** overlap across every layer (`frame & ...` and `medals & ...`, including `frame & rear_hardware`) and `0` invalid solids (`55` parts total).
+- **Updated Bounds**: `440.0 × 31.0 × 302.0 mm` frame (`440.0 × 35.17 × 302.0 mm` total with D-rings).
+- **Updated STEP Exports (without medals)**: [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) (`1.45 MB`) and `exports/medal_8_sq_parts/*.step` (`rear_spacer.step` removed).
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948502983.CI4iCwtxyKQcIkQ_7dvn4JbCaRqdFlYc710GphKqLcY](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948502983.CI4iCwtxyKQcIkQ_7dvn4JbCaRqdFlYc710GphKqLcY)
+
+---
+
+## User (2026-11-17T08:12:39Z)
+
+<USER_REQUEST>
+the backspacer removed but keep 5mm back space, reduce the rear space to 15mm
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T18:12:39+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 12
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-17T08:13:30Z)
+
+Rebuilt **`medal_8_sq`** with the `5.0 mm` open rear space behind `mid_board` (physical `rear_spacer` omitted) and `15.0 mm` front spacer (`35.0 mm` frame depth). Waiting for the final collision checks and STEP re-export to complete.
+
+---
+
+### Assistant (2026-11-17T08:13:54Z)
+
+Updated **`medal_8_sq`** in `src_medal_8_sq/` with the **`5.0 mm` empty rear cavity** behind `mid_board` (physical `rear_spacer` remains removed) and reduced `FRONT_SPACER_T` from `16.0 mm` to **`15.0 mm`**:
+
+*(Note: I interpreted "reduce the rear space to 15mm" as reducing `FRONT_SPACER_T` from `16.0 mm` to `15.0 mm`, since the back space is `5.0 mm`. Let me know if you meant a different dimension.)*
+
+### Changes & Stack (`FRAME_DEPTH = 35.0 mm`)
+- **[src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L57-L67)**:
+  - `FRONT_SPACER_T = 15.0` (`Y = 4.50` to `19.50`, `10.0 mm` front air gap before the `5.0 mm` medals)
+  - `REAR_SPACER_T = 5.0` (`Y = 22.50` to `27.50` open air space behind `mid_board`; physical `rear_spacer` part omitted)
+  - `SPLINE_YS = (10.0, 23.0)`
+  - **Layer Stack**: `3.0` (front lip) + `1.5` (acrylic) + `15.0` (front spacer) + `3.0` (mid-board) + `5.0` (open rear space) + `3.0` (backboard) + `1.5` (kerf) + `3.0` (back lip) = **`35.0 mm`**
+- **[src_medal_8_sq/medals.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/medals.py#L64-L109)**: Restored the full rear ribbon fold (`y_back_drop = 4.8`, `r_mid = 1.8`, `RIBBON_TAIL_H = 48.0`) inside the `5.0 mm` rear space (`2.60 mm` clear before the backboard).
+
+*(Assembly note: With no physical `rear_spacer`, tack/glue the `front_spacer` to `mid_board`—or place 4 small `5 mm` foam pads on the backboard—so `mid_board` stays seated forward against `front_spacer`.)*
+
+### Verification, Exports & Viewer
+- **Solids & Interference**: `55` parts, `0` invalid solids, **`0.000000 mm³`** overlap across all layers (`frame & ...` and `medals & ...`).
+- **Bounds**: `440.0 × 35.0 × 302.0 mm` frame (`440.0 × 39.17 × 302.0 mm` total with D-rings).
+- **Updated STEP Exports**: [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) and `exports/medal_8_sq_parts/*.step`.
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948503202.EgQ5junemadJjT71P96HebQ5Dk8PNJuNj1qlaJRKfGk](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948503202.EgQ5junemadJjT71P96HebQ5Dk8PNJuNj1qlaJRKfGk)
+
+---
+
+## User (2026-11-17T08:18:08Z)
+
+<USER_REQUEST>
+technicial question, can the kerf reduce to 1mm?
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T18:18:08+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 12
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-17T08:18:08Z)
+
+It depends on whether you mean **kerf width (`1.5 → 1.0 mm`)** or **kerf depth (`3.0 → 1.0 mm`)**:
+
+---
+
+### 1. Kerf Width (`KERF_H`: `1.5 mm → 1.0 mm`) — *Possible, but risky*
+
+* **Hardware fit:** Our current turn-lock plate is **`1.2 mm` thick**, which would not fit in a `1.0 mm` slot. You would have to switch to **`0.8 mm` spring-steel clips**, leaving only **`0.2 mm` clearance**.
+* **Wood & stack tolerance:** Across 4 stacked sheets (`1.5` acrylic + `15` spacer + `3` mid-board + `3` backboard) plus walnut humidity movement, real-world tolerance is **`±0.3–0.5 mm`**. A `1.0 mm` slot has almost no margin—if the stack runs slightly thick or thin, the lock will **bind** and refuse to turn into the slot.
+* **Cutter rigidity:** A **`1.0 mm`** thin slotting cutter/saw blade flexes and burns in dense walnut far more easily than a **`1.5 mm`** blade.
+* **Recommendation:** Keep **`1.5 mm`** (`0.3–0.5 mm` running clearance with a `1.0–1.2 mm` clip). Only go down to `1.0 mm` if you use **`0.8 mm` spring-steel clips with a chamfered/curved lead-in tip** and verify on a physical sample first.
+
+---
+
+### 2. Kerf Depth (`KERF_DEPTH`: `3.0 mm → 1.0 mm`) — *No, too shallow*
+
+* The backboard has `0.3 mm` clearance per side (`0.6 mm` total play). If the backboard shifts `0.6 mm` to one side, a `1.0 mm` deep kerf leaves only **`0.4 mm`** of engagement on the opposite edge.
+* Combined with wood/miter tolerances and the weight of the walnut frame pulling on the backboard-mounted hangers, the locks could **pop out of a `1.0 mm` kerf**.
+* **Minimum safe kerf depth:** **`2.5–3.0 mm`** (giving `~2.0–2.2 mm` positive engagement).
+
+---
+
+## User (2026-11-17T08:19:19Z)
+
+<USER_REQUEST>
+reduce the back space to 3mm, so that the thickness down to 33mm
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T18:19:19+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 12
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-17T08:19:57Z)
+
+Reduced the rear open space behind `mid_board` to **`3.0 mm`**, bringing **`medal_8_sq`** frame depth down to **`33.0 mm`** (`440 × 33.0 × 302 mm`). Waiting for the final interference check and STEP export to finish.
+
+---
+
+### Assistant (2026-11-17T08:20:44Z)
+
+Reduced the rear open space behind `mid_board` to **`3.0 mm`** in [src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L57-L63) (`REAR_SPACER_T = 3.0`, `SPLINE_YS = (10.0, 22.0)`), bringing **`medal_8_sq`** frame depth down to **`33.0 mm`**:
+
+### Updated Layer Stack (`FRAME_DEPTH = 33.0 mm`)
+- `hardwood_frame`: `Y = [0.00, 33.00]` (`440.0 × 33.0 × 302.0 mm`)
+- `acrylic_cover`: `Y = [3.00, 4.50]` (`1.5 mm`)
+- `front_spacer`: `Y = [4.50, 19.50]` (`15.0 mm`, `10.0 mm` front air gap before `5.0 mm` medals)
+- `medals`: `Y = [14.50, 24.90]` (ribbon tail clears backboard by `0.60 mm`)
+- `mid_board`: `Y = [19.50, 22.50]` (`3.0 mm`)
+- **Open rear space**: `Y = [22.50, 25.50]` (`3.0 mm`, no `rear_spacer`)
+- `backboard`: `Y = [25.50, 28.50]` (`3.0 mm`, followed by `1.5 mm` kerf + `3.0 mm` solid back lip)
+- `rear_hardware`: `Y = [28.50, 36.88]` (`440.0 × 37.17 × 302.0 mm` total bounds)
+
+### Verification, Exports & Viewer
+- **Solids & Interference**: `55` parts, `0` invalid solids, **`0.000000 mm³`** overlap across all layers (`frame & ...` and `medals & ...`).
+- **Updated STEP Exports**: [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) and `exports/medal_8_sq_parts/*.step`.
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948503589.8csUdZuYSxEcTMTey9p6b-K4wjICTMdTvLOlo7y3RSY](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948503589.8csUdZuYSxEcTMTey9p6b-K4wjICTMdTvLOlo7y3RSY)
+
+---
+
+## User (2026-11-17T08:24:58Z)
+
+<USER_REQUEST>
+make the round corners on 4 corners
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T18:24:58+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 12
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-17T08:25:49Z)
+
+Restored the `20.0 mm` rounded outer corners on all 4 corners of **`medal_8_sq`** in [src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L48) (`FRAME_OUTER_CORNER_R = 20.0`, while keeping the flat front face `FRAME_OUTER_FRONT_FILLET = 0.0`, square `90°` inner opening/rabbet, and `33.0 mm` frame depth):
+
+### Verification, Exports & Viewer
+- **Solids & Interference**: `hardwood_frame` has `12` solids (`0` invalid); **`0.000000 mm³`** overlap across all internal layers and rear hardware (`55` parts total, `440.0 × 33.0 × 302.0 mm` frame, `440.0 × 37.17 × 302.0 mm` total bounds).
+- **Updated STEP Exports**: [hardwood_frame.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_parts/hardwood_frame.step) and [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step).
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948503925.63hCZdB8i9CSGykLr0E0fW1NjvQiEMDDwL9GkLMYK2Y](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948503925.63hCZdB8i9CSGykLr0E0fW1NjvQiEMDDwL9GkLMYK2Y)
+
+---
+
+## User (2026-11-17T08:27:08Z)
+
+<USER_REQUEST>
+undo
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T18:27:08+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 12
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+## User (2026-11-17T08:29:57Z)
+
+<USER_REQUEST>
+reduce the front lip width to 20mm, and reduce the radius of the round corner
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T18:29:57+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/README.md (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 12
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-17T08:30:44Z)
+
+Updated **`medal_8_sq`** front face width to **`20.0 mm`** (`12.0 mm` walnut wall + `4.0 mm` spacer + `4.0 mm` lip overhang, outer bounds `424.0 × 33.0 × 286.0 mm`) and reduced the 4 outer corner radii to **`12.0 mm`** (`SPLINE_DEPTH = 13.0 mm`). Waiting for the final collision check and STEP export to finish.
+
+---
+
+### Assistant (2026-11-17T08:31:01Z)
+
+Updated **`medal_8_sq`** in [src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L42-L57) to reduce the front face width to **`20.0 mm`** and the 4 outer corner radii to **`12.0 mm`**:
+
+### Updated Parameters
+- **Front Face Width (`FRAME_FACE_W`)**: `28.0 mm` → **`20.0 mm`** (`12.0 mm` outer walnut wall + `4.0 mm` spacer + `4.0 mm` lip overhang)
+- **Outer Corner Radius (`FRAME_OUTER_CORNER_R`)**: `20.0 mm` → **`12.0 mm`** (matching the `12.0 mm` walnut wall for uniform corner thickness around the `90°` rabbet)
+- **Corner Spline Depth (`SPLINE_DEPTH`)**: `17.0 mm` → **`13.0 mm`** (measured from sharp corner, keeping `~4.0 mm` solid wood between the spline slot and the rabbet cavity)
+- **Outer Frame Dimensions**: `424.0 × 33.0 × 286.0 mm` (`424.0 × 37.17 × 286.0 mm` total bounds with D-rings; `384.0 × 246.0 mm` visible opening unchanged)
+
+### Verification, Exports & Viewer
+- **Solids & Interference**: `55` parts, `0` invalid solids, **`0.000000 mm³`** overlap across all internal layers (`acrylic_cover`, `front_spacer`, `medals`, `mid_board`, `backboard`) and `rear_hardware`.
+- **Updated STEP Exports**: [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) and `exports/medal_8_sq_parts/*.step`.
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948504236.CDgv9rzeHz5_274FM6aBSaFgl2hnP91Tjv-WrAleyqw](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948504236.CDgv9rzeHz5_274FM6aBSaFgl2hnP91Tjv-WrAleyqw)
+
+---
+
+## User (2026-11-17T09:05:36Z)
+
+<USER_REQUEST>
+give me the production spec in chinese
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T19:05:36+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-17T09:05:47Z)
+
+以下为 **`medal_8_sq`（8枚奖牌展示框）完整生产工艺及尺寸规格书**（可直接配合 [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) 及 `exports/medal_8_sq_parts/` 发给1688工厂报价与打样）：
+
+---
+
+### 北美黑胡桃实木 8枚奖牌展示框（`medal_8_sq`）生产技术规格书
+
+#### 一、 整体规格
+* **成品外框尺寸**：**`424.0 × 286.0 × 33.0 mm`**（宽 × 高 × 深；含背面D形扣总深约 `37.2 mm`）
+* **正面可视窗口**：**`384.0 × 246.0 mm`**（内框直角，无圆角）
+* **正面框面宽度**：**`20.0 mm`**（其中实木外框壁厚 `12.0 mm` + 内部前垫条遮挡 `4.0 mm` + 正面实木压边/唇边露出 `4.0 mm`）
+* **外框四角**：**`R12.0 mm` 外圆角**（正面直角平边，无正面大圆弧倒角，无内侧弧形装饰槽）
+* **适用奖牌**：2行 × 4列共 8枚（单枚奖牌按 `Ø73 × 5 mm`、丝带 `25 mm` 宽设计）
+
+---
+
+#### 二、 从前到后各层结构与材质（BOM清单）
+
+| 序号 | 零件名称 | 数量 | 尺寸规格 (mm) | 材质与表面处理 | 工艺说明 |
+| :---: | :--- | :---: | :--- | :--- | :--- |
+| **1** | **实木外框** (`hardwood_frame`) | 1套（4条拼框） | 外框 `424 × 286 × 33`<br>框壁厚 `12.0`，前压边深 `3.0` | **100% 北美黑胡桃纯实木 (FAS级)**<br>表面 180–320# 精细打磨，哑光木蜡油 / 哑光清漆 | 见下文第三部分详细加工要求 |
+| **2** | **角部榫片** (`corner_splines`) | 8片（每角2片） | 厚 `3.2`，插入斜角深 `13.0`（距尖角起算） | **深色烤黑胡桃木**（与框体形成对比色） | 位置 `Y = 10.0 mm` 及 `22.0 mm`，与框体平齐打磨 |
+| **3** | **透明面板** (`acrylic_cover`) | 1片 | **`399.6 × 261.6 × 1.5`**（90°直角） | **1.5 mm 高透亚克力 (PMMA)** | 激光切割，双面保留PE保护膜 |
+| **4** | **前垫条** (`front_spacer`) | 4条/套 | 截面 **`15.0 (深) × 4.0 (宽)`**<br>左右两条长 **`261.6`**, 上下两条长 **
+<truncated 1026 bytes>
+2、下2、左1、右1），孔心距背板外边 **`18.5 mm`**，向外旋转卡入框内卡槽 |
+| **9** | **D形挂扣** (`wall_hanger`) | 2套 | 金属挂片 `10 × 30 × 1.6` + D环 | **枪灰色/镀锌重型金属挂件 + 铆钉** | **铆接安装于背板左右两侧**（距背板左右边 `22.0 mm`，高度在框高 `2/3` 处 `Z = 190.7 mm`） |
+
+---
+
+#### 三、 外框核心加工工艺要求
+
+1. **内槽尺寸 (`CAVITY`)**：`400.0 × 262.0 mm`，深 `30.0 mm`（`Y = 3.0 ~ 33.0 mm`），**内角为 90° 直角**。
+2. **内壁锁定卡槽 (`KERF`)**：
+   * 位于背板后方（`Y = 28.5 ~ 30.0 mm`），**槽宽 `1.5 mm` × 槽深 `3.0 mm`**。
+   * 卡槽后方保留 **`3.0 mm` 实木后唇边**（`Y = 30.0 ~ 33.0 mm`），防止崩边或锁扣受力断裂。
+   * **加工建议**：由于内外均为直线/直角框型，建议在 **45°拼角前** 先用立铣/台锯在直料内侧开好 `30 mm` 槽位及 `1.5 × 3.0 mm` 锁定卡槽（无需定制成型刀），再切45°斜角拼框，最后用 **CNC 加工四角 `R12.0 mm` 外圆角**。
+3. **拼角加固**：45°拼角胶合后，每角用锯片开 2 道 `3.2 mm` 榫槽（深度从理论尖角起算 `13.0 mm`，距内槽留有约 `4 mm` 余量不穿透），插入深色胡桃木榫片并沿 `R12` 圆角打磨齐平。
+4. **公差与装配**：
+   * 透明亚克力、中层挂板与框内槽单边留 `0.2 mm` 间隙；背板单边留 `0.3 mm` 间隙。
+   * **注意**：背板为 `3 mm` MDF，**禁止使用木螺丝**固定五金，旋转扣与D形挂扣必须使用 **半空心铆钉/气动铆接**。
+
+---
+
+#### 四、 包装与打样要求
+* **打样**：先按附件 STEP 图纸制作 **1–2 个样品**，重点验证：① `1.5 mm` 卡槽与 `1.2 mm` 旋转锁扣配合顺滑度（不卡涩不晃动）；② `R12` 外圆角及 `3.2 mm` 榫片平齐度；③ 桦木中层板开孔无明显焦黑毛刺。
+* **大货包装**：单片独立透明袋 + 四角加厚 EPE 珍珠棉护角 + 五层加厚瓦楞电商外箱（满足快递防摔要求）。
+
+---
+
+## User (2026-11-17T13:53:41Z)
+
+<USER_REQUEST>
+update to git
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-17T23:53:41+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Gemini 4 Hydrogen (High) to Gemini 4 Hydrogen (Low). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+
+---
+

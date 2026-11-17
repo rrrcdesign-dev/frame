@@ -14,7 +14,10 @@ def acrylic_cover():
     with bd.BuildPart() as part:
         with bd.BuildSketch(plane):
             with bd.Locations((0.0, FRAME_OUTER_H / 2.0)):
-                bd.RectangleRounded(SHEET_W, SHEET_H, SHEET_CORNER_R)
+                if SHEET_CORNER_R > 0.0:
+                    bd.RectangleRounded(SHEET_W, SHEET_H, SHEET_CORNER_R)
+                else:
+                    bd.Rectangle(SHEET_W, SHEET_H)
         bd.extrude(amount=-ACRYLIC_T)
     sheet = part.part
     sheet.label = "acrylic_cover"
