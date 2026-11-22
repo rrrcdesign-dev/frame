@@ -53,22 +53,23 @@ def _build_unslotted_frame_envelope() -> bd.Shape:
                     bd.Rectangle(CAVITY_W, CAVITY_H)
         bd.extrude(amount=-(FRAME_DEPTH - LIP_DEPTH + 2.0), mode=bd.Mode.SUBTRACT)
 
-        # Internal locking kerf groove behind the 3 mm recessed backboard
-        kerf_plane = bd.Plane(origin=(0.0, Y_KERF_START, 0.0), x_dir=(1, 0, 0), z_dir=(0, -1, 0))
-        with bd.BuildSketch(kerf_plane):
-            with bd.Locations((0.0, FRAME_OUTER_H / 2.0)):
-                if CAVITY_CORNER_R > 0.0:
-                    bd.RectangleRounded(
-                        CAVITY_W + 2.0 * KERF_DEPTH,
-                        CAVITY_H + 2.0 * KERF_DEPTH,
-                        CAVITY_CORNER_R + KERF_DEPTH,
-                    )
-                else:
-                    bd.Rectangle(
-                        CAVITY_W + 2.0 * KERF_DEPTH,
-                        CAVITY_H + 2.0 * KERF_DEPTH,
-                    )
-        bd.extrude(amount=-KERF_H, mode=bd.Mode.SUBTRACT)
+        # Internal locking kerf groove (only when KERF_H > 0 and KERF_DEPTH > 0)
+        if KERF_H > 0.0 and KERF_DEPTH > 0.0:
+            kerf_plane = bd.Plane(origin=(0.0, Y_KERF_START, 0.0), x_dir=(1, 0, 0), z_dir=(0, -1, 0))
+            with bd.BuildSketch(kerf_plane):
+                with bd.Locations((0.0, FRAME_OUTER_H / 2.0)):
+                    if CAVITY_CORNER_R > 0.0:
+                        bd.RectangleRounded(
+                            CAVITY_W + 2.0 * KERF_DEPTH,
+                            CAVITY_H + 2.0 * KERF_DEPTH,
+                            CAVITY_CORNER_R + KERF_DEPTH,
+                        )
+                    else:
+                        bd.Rectangle(
+                            CAVITY_W + 2.0 * KERF_DEPTH,
+                            CAVITY_H + 2.0 * KERF_DEPTH,
+                        )
+            bd.extrude(amount=-KERF_H, mode=bd.Mode.SUBTRACT)
 
         # Viewing opening through front lip
         with bd.BuildSketch(p_xz):

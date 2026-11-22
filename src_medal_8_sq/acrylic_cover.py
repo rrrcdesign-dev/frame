@@ -1,4 +1,4 @@
-"""Clear 1.5 mm PMMA acrylic cover seated behind the front rabbet lip."""
+"""Clear 2.0 mm PMMA acrylic cover seated behind the front rabbet lip."""
 
 import build123d as bd
 from cad import model

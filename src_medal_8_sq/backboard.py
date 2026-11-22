@@ -1,4 +1,4 @@
-"""3 mm removable MDF backboard held by rear turn buttons."""
+"""15 mm removable MDF backboard recessed 1.0 mm from the back face of the frame."""
 
 import build123d as bd
 from cad import model

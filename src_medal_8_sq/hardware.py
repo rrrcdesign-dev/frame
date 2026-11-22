@@ -176,42 +176,8 @@ def wall_hanger():
 
 @model
 def rear_hardware():
-    """6 backboard-mounted turn locks (engaging the frame kerf) and 2 backboard-mounted D-ring hangers."""
-    tb_proto = turn_button().shape
+    """2 backboard-mounted metal D-ring wall-hanging brackets (no turning locks)."""
     hanger_proto = wall_hanger().shape
-
-    turn_buttons = []
-    z_center = FRAME_OUTER_H / 2.0
-    x_bb_left = -BACKBOARD_W / 2.0 + TURN_LOCK_EDGE_INSET
-    x_bb_right = BACKBOARD_W / 2.0 - TURN_LOCK_EDGE_INSET
-    z_bb_bottom = z_center - BACKBOARD_H / 2.0 + TURN_LOCK_EDGE_INSET
-    z_bb_top = z_center + BACKBOARD_H / 2.0 - TURN_LOCK_EDGE_INSET
-
-    # Bottom edge (pointing -Z outward into bottom kerf -> +90 deg around Y)
-    for idx, x in enumerate(TURN_BUTTON_TOP_BOTTOM_XS, start=1):
-        tb = bd.Pos(x, Y_BACKBOARD_END, z_bb_bottom) * bd.Rot(0, 90, 0) * tb_proto
-        tb.label = f"turn_button_bottom_{idx}"
-        turn_buttons.append(tb)
-
-    # Top edge (pointing +Z outward into top kerf -> -90 deg around Y)
-    for idx, x in enumerate(TURN_BUTTON_TOP_BOTTOM_XS, start=1):
-        tb = bd.Pos(x, Y_BACKBOARD_END, z_bb_top) * bd.Rot(0, -90, 0) * tb_proto
-        tb.label = f"turn_button_top_{idx}"
-        turn_buttons.append(tb)
-
-    # Left edge (pointing -X outward into left kerf -> 180 deg around Y)
-    for idx, z in enumerate(TURN_BUTTON_SIDE_ZS, start=1):
-        tb = bd.Pos(x_bb_left, Y_BACKBOARD_END, z) * bd.Rot(0, 180, 0) * tb_proto
-        tb.label = f"turn_button_left_{idx}"
-        turn_buttons.append(tb)
-
-    # Right edge (pointing +X outward into right kerf -> 0 deg)
-    for idx, z in enumerate(TURN_BUTTON_SIDE_ZS, start=1):
-        tb = bd.Pos(x_bb_right, Y_BACKBOARD_END, z) * tb_proto
-        tb.label = f"turn_button_right_{idx}"
-        turn_buttons.append(tb)
-
-    tb_group = bd.Compound(children=turn_buttons, label="turn_buttons")
 
     # Left and right metal D-ring hanging brackets mounted on the recessed backboard
     x_hanger_left = -BACKBOARD_W / 2.0 + HANGER_BACKBOARD_INSET
@@ -223,8 +189,7 @@ def rear_hardware():
     hanger_right = bd.Pos(x_hanger_right, Y_BACKBOARD_END, HANGER_Z) * bd.Rot(0, 180, 0) * hanger_proto
     hanger_right.label = "wall_hanger_right"
 
-    hangers_group = bd.Compound(children=[hanger_left, hanger_right], label="wall_hangers")
-    return bd.Compound(children=[tb_group, hangers_group], label="rear_hardware")
+    return bd.Compound(children=[hanger_left, hanger_right], label="rear_hardware")
 
 
 if __name__ == "__main__":

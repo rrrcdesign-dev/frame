@@ -1955,3 +1955,924 @@ The user changed setting `Model Selection` from Gemini 4 Hydrogen (High) to Gemi
 
 ---
 
+### Assistant (2026-11-17T13:54:12Z)
+
+Committed and pushed the latest `medal_8_sq` updates and conversation log to GitHub:
+
+- **Repository**: [https://github.com/rrrcdesign-dev/frame](https://github.com/rrrcdesign-dev/frame)
+- **Commit**: `43b977b` (`main` branch, `8 files changed`)
+- **Included**:
+  - [src_medal_8_sq/](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq) (`33.0 mm` depth, `20.0 mm` face width, `R12.0` outer corners, `90°` inner opening/rabbet/sheets, `3.0 mm` front/back lips, no physical rear spacer)
+  - [docs/conversation.md](file:///Users/rmac/AntiGravity/Frame/docs/conversation.md) (updated with the latest design changes and Chinese production spec)
+
+---
+
+## User (2026-11-20T09:07:15Z)
+
+<USER_REQUEST>
+run preview
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-20T19:07:15+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-20T09:07:46Z)
+
+Opened the `cad-server` preview for [src_medal_8_sq/medal_8_sq.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/medal_8_sq.py) in your browser:
+
+- **Viewer URL**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948765654.AFIUKIvXtGVE5BcDsG6L7c1x9IWrkgD6zuPMeSHD6hI](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=4948765654.AFIUKIvXtGVE5BcDsG6L7c1x9IWrkgD6zuPMeSHD6hI)
+
+---
+
+## User (2026-11-20T09:12:58Z)
+
+<USER_REQUEST>
+run corner on the front outer edges. total thickness is 35mm. adjust (if different) the front lips and backlips to 3mm, front space 15mm, thickness of the turning button is 1mm. let me know the rear space size
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-20T19:12:58+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Gemini 4 Hydrogen (Low) to Gemini 4 Hydrogen (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+
+---
+
+### Assistant (2026-11-20T09:13:41Z)
+
+Rebuilt **`medal_8_sq`** at **`35.0 mm`** total frame thickness with an **`8.0 mm`** rounded fillet on the front outer edges, **`1.0 mm`** turning buttons, and **`5.0 mm`** rear space (`3.0` front lip + `1.5` acrylic + `15.0` front spacer + `3.0` mid-board + `5.0` rear space + `3.0` backboard + `1.5` kerf + `3.0` back lip = `35.0 mm`). Waiting for the collision check and STEP export to finish.
+
+---
+
+### Assistant (2026-11-20T09:14:05Z)
+
+Updated **`medal_8_sq`** in [src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L50-L106), verified zero collisions, re-exported the STEP files, and opened the viewer:
+
+### Rear Space Size & Stack (`Total Frame Depth = 35.0 mm`)
+- **Rear space size**: **`5.0 mm`** (`Y = 22.50` to `27.50 mm` behind `mid_board`, leaving `2.60 mm` air gap behind the `2.40 mm` ribbon tail before the backboard)
+
+| Layer | Thickness (mm) | `Y` Range (mm) | Notes |
+| :--- | :---: | :---: | :--- |
+| **Front Lip** (`LIP_DEPTH`) | `3.0` | `0.00 – 3.00` | Verified at `3.0 mm` |
+| **Acrylic Cover** (`ACRYLIC_T`) | `1.5` | `3.00 – 4.50` | Clear PMMA |
+| **Front Space** (`FRONT_SPACER_T`) | `15.0` | `4.50 – 19.50` | `10.0 mm` front air gap before `5.0 mm` medals |
+| **Mid-Board** (`MID_BOARD_T`) | `3.0` | `19.50 – 22.50` | Birch/ash plywood with 8 slots |
+| **Rear Space** (`REAR_SPACER_T`) | **`5.0`** | `22.50 – 27.50` | Open rear space (physical `rear_spacer` omitted) |
+| **Backboard** (`BACKBOARD_T`) | `3.0` | `27.50 – 30.50` | MDF backboard |
+| **Locking Kerf** (`KERF_H`) | `1.5` | `30.50 – 32.00` | Receives **`1.0 mm`** turning buttons (`0.5 mm` clearance) |
+| **Back Lip** (`BACK_LIP_T`) | `3.0` | `32.00 – 35.00` | Verified at `3.0 mm` |
+| **Total Frame Thickness** | **`35.0`** | `0.00 – 35.00` | Total with rear D-rings: `39.17 mm` |
+
+### Additional Updates & Verification
+- **Front Outer Edge Fillet (`FRAME_OUTER_FRONT_FILLET`)**: Set to **`8.0 mm`** (proportional to the `20.0 mm` face width and `R12.0` outer corners, leaving `12.0 mm` flat front face).
+- **Corner Spline Positions (`SPLINE_YS`)**: Adjusted to **`(11.5, 23.0)`** (`9.9 mm` clears the `8.0 mm` front fillet; `24.6 mm` clears the `30.5 mm` kerf).
+- **Turning Button Thickness (`TURN_BUTTON_T`)**: Set to **`1.0 mm`**.
+- **Solids & Interference**: `55` parts, `0` invalid solids, **`0.000000 mm³`** overlap across all layers & hardware.
+- **Updated STEP Exports**: [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) and `exports/medal_8_sq_parts/*.step`.
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+
+---
+
+## User (2026-11-20T09:16:22Z)
+
+<USER_REQUEST>
+move the corner splines backward 2mm
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-20T19:16:22+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-20T09:17:08Z)
+
+Moved both corner splines **`2.0 mm` backward** along `+Y` in [src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L57):
+
+- **`SPLINE_YS`**: `(11.5, 23.0)` → **`(13.5, 25.0)`** (`11.9 mm` clears the `8.0 mm` front fillet by `3.9 mm`; `26.6 mm` clears the `30.5 mm` locking kerf by `3.9 mm`).
+- **Validation & Exports**: `hardwood_frame` `0` invalid solids; re-exported [hardwood_frame.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_parts/hardwood_frame.step) and [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step).
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+
+---
+
+## User (2026-11-20T09:18:41Z)
+
+<USER_REQUEST>
+the width of the each side is 15mm
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-20T19:18:41+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-20T09:19:18Z)
+
+Updated **`medal_8_sq`** side face width to **`15.0 mm`** (`9.0 mm` walnut wall + `3.0 mm` spacer + `3.0 mm` lip overhang; `R9.0` outer corners, `6.0 mm` front edge fillet, `SPLINE_DEPTH = 9.5 mm`; outer bounds `414.0 × 35.0 × 276.0 mm`). Waiting for the final collision check and STEP export to finish.
+
+---
+
+### Assistant (2026-11-20T09:19:38Z)
+
+Updated **`medal_8_sq`** in [src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L42-L56) to reduce the width of each frame side to **`15.0 mm`**:
+
+### Updated Dimensions
+- **Frame Side Width (`FRAME_FACE_W`)**: `20.0 mm` → **`15.0 mm`** (`9.0 mm` outer walnut wall + `3.0 mm` front spacer + `3.0 mm` lip overhang)
+- **Outer Corner Radius (`FRAME_OUTER_CORNER_R`)**: `12.0 mm` → **`9.0 mm`** (matching the `9.0 mm` walnut wall around the `90°` rabbet corner)
+- **Front Edge Fillet (`FRAME_OUTER_FRONT_FILLET`)**: `8.0 mm` → **`6.0 mm`** (leaving `9.0 mm` flat front face before the viewing opening)
+- **Corner Spline Depth (`SPLINE_DEPTH`)**: `13.0 mm` → **`9.5 mm`** (clears the `9.0 mm` wall / rabbet cavity by `~3.2 mm`)
+- **Outer Frame Dimensions**: `414.0 × 35.0 × 276.0 mm` (`414.0 × 39.17 × 276.0 mm` total bounds with D-rings; `384.0 × 246.0 mm` visible opening unchanged)
+
+### Verification, Exports & Viewer
+- **Solids & Interference**: `55` parts, `0` invalid solids, **`0.000000 mm³`** overlap across all internal layers and `rear_hardware`.
+- **Updated STEP Exports**: [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) and `exports/medal_8_sq_parts/*.step`.
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+
+---
+
+## User (2026-11-20T09:20:41Z)
+
+<USER_REQUEST>
+adjust the thickness of the wall and the front lips for production, the front spacer make it 3mmx15mm
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-20T19:20:41+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Gemini 4 Hydrogen (High) to Orchestrator (Argon). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+
+---
+
+### Assistant (2026-11-20T09:22:36Z)
+
+Updated **`medal_8_sq`** wall and lip thicknesses for hardwood production (`10.0 mm` walnut wall, `4.0 mm` front lip, `3.5 mm` back lip, `2.5 mm` kerf depth, `3.0 × 15.0 mm` front spacer, `3.5 mm` rear open space, `35.0 mm` total frame depth). Waiting for the final collision check and STEP export to finish.
+Updated **`medal_8_sq`** in [src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L42-L107) for stronger hardwood production while keeping the **`3.0 × 15.0 mm` front spacer**, **`15.0 mm` frame side width**, and **`35.0 mm` total frame depth**:
+
+### Production Adjustments (`414.0 × 35.0 × 276.0 mm` frame)
+- **Outer Walnut Wall (`FRAME_WALL_W`)**: `9.0 mm` → **`10.0 mm`** (`7.5 mm` solid walnut behind the kerf)
+- **Outer Corner Radius (`FRAME_OUTER_CORNER_R`)**: `9.0 mm` → **`10.0 mm`** (matches the `10.0 mm` wall cleanly around the `90°` rabbet corner; `SPLINE_DEPTH = 10.5 mm`)
+- **Front Lip (`LIP_DEPTH` & Overhang)**: `3.0 mm` → **`4.0 mm`** deep × **`5.0 mm`** rabbet shelf (`3.0 mm` front spacer + `2.0 mm` visible lip overhang)
+- **Front Spacer**: **`3.0 × 15.0 mm`** (`SPACER_WALL_W = 3.0`, `FRONT_SPACER_T = 15.0`)
+- **Rear Kerf & Back Lip**: `KERF_DEPTH = 2.5 mm` (`TURN_LOCK_EDGE_INSET = 19.0 mm` for `1.7 mm` lock engagement) and `BACK_LIP_T = 3.5 mm`
+- **Rear Open Space (`REAR_SPACER_T`)**: `3.5 mm` (`Y = 23.50` to `27.00 mm`, leaving `1.10 mm` air gap behind the `2.40 mm` ribbon bend)
+
+Waiting for `task-621` to finish the remaining checks and STEP export so I can open the viewer.
+
+---
+
+### Assistant (2026-11-20T09:23:02Z)
+
+All verification checks passed and the updated viewer is open:
+
+- **Solids & Interference**: `55` parts, `0` invalid solids, **`0.000000 mm³`** overlap across all layers (`frame & ...`, `medals & ...`, and `frame & rear_hardware`).
+- **Frame Bounds**: `414.0 × 35.0 × 276.0 mm` (`414.0 × 38.67 × 276.0 mm` total bounds with D-rings).
+- **Front Spacer**: **`3.0 × 15.0 mm`** (`Y = [5.50, 20.50]`, `10.0 mm` front air gap before `5.0 mm` medals).
+- **Updated STEP Exports**: [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) and `exports/medal_8_sq_parts/*.step`.
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+
+---
+
+## User (2026-11-20T09:22:56Z)
+
+<USER_REQUEST>
+write the spec of the the frame to production in chinese
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-20T19:22:56+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Orchestrator (Argon) to Gemini 4 Hydrogen (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+
+---
+
+### Assistant (2026-11-20T09:23:22Z)
+
+以下为更新后的 **`medal_8_sq`（8枚奖牌展示框 — 15mm窄边 / 35mm厚生产优化版）完整生产工艺及尺寸规格书**（可直接配合最新导出的 [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) 及 `exports/medal_8_sq_parts/` 发给1688工厂）：
+
+---
+
+### 北美黑胡桃实木 8枚奖牌展示框（`medal_8_sq`）生产技术规格书
+
+#### 一、 整体外框规格
+* **成品外框尺寸**：**`414.0 × 276.0 × 35.0 mm`**（宽 × 高 × 深；含背面D形挂扣总深约 `38.7 mm`）
+* **正面可视窗口**：**`384.0 × 246.0 mm`**（内框为 `90°` 直角，无内侧弧形装饰槽）
+* **正面单边框宽**：**`15.0 mm`**（其中外侧实木壁厚 `10.0 mm` + 内部前垫条宽 `3.0 mm` + 正面实木前唇边额外露出 `2.0 mm`，即正面总压边槽宽 `5.0 mm`）
+* **外框四角及前边倒角**：
+  * 四角外圆角：**`R10.0 mm`**（与 `10.0 mm` 壁厚同心过渡，保证转角壁厚均匀）
+  * 正面外沿圆弧倒角：**`R6.0 mm`**（正面保留 `9.0 mm` 平整框面）
+* **适用奖牌布局**：2行 × 4列共 8枚（单枚奖牌按 `Ø73 × 5 mm`、丝带宽 `25 mm`、牌间距 `14 mm`、距内框边 `25 mm` 设计）
+
+---
+
+#### 二、 从前到后各层结构与材质清单（BOM）
+
+| 序号 | 零件名称 | 数量 | 精准尺寸规格 (mm) | 材质与表面处理 | 工艺及装配说明 |
+| :---: | :--- | :---: | :--- | :--- | :--- |
+| **1** | **实木外框**<br>(`hardwood_frame`) | 1套<br>(4条拼框) | 外径 **`414.0 × 276.0 × 35.0`**<br>内槽 **`394.0 × 256.0 × 深31.0`**<br>壁厚 **`10.0`**，前唇厚 **`4.0`** | **100% 北美黑胡桃纯实木 (FAS级)**<br>180–320#打磨，哑光木蜡油或哑光清漆 | 45°斜切拼角；内槽四角为 `90°` 直角；正面外边 `R6.0` 圆角，四角外径 `R10.0` |
+| **2** | **角部加固榫片**<br>(`corner_splines`) | 8片<br>(每角2片) | 厚 **`3.2`**，斜向深 **`10.5`**（从理论尖角起算，距内槽留有 `3.6 mm` 实木
+<truncated 1440 bytes>
+ |
+| **8** | **旋转锁定扣**<br>(`turn_button`) | 6套 | 锁片 **`21.0 × 9.0 × 厚 1.0`** | **枪灰色/镀锌冲压铁片（1.0mm厚）+ 铆钉** | **铆接于背板背面**（上下各2个 `X = ±110 mm`，左右各1个 `Z = 138 mm`），铆钉中心距背板边 **`19.0 mm`** |
+| **9** | **D形挂扣**<br>(`wall_hanger`) | 2套 | 挂片 `10 × 30 × 1.6` + D环 | **枪灰色/镀锌重型金属挂件 + 铆钉** | **铆接于背板左右两侧**（中心距背板左右边 `22.0 mm`，高度 `Z = 184.0 mm` 即框高 `2/3` 处） |
+
+---
+
+#### 三、 外框关键尺寸与卡槽加工要求（重点核对）
+
+1. **深度方向（`Y = 0 → 35.0 mm`）完整叠加关系**：
+   * `4.0 mm`（实木前唇边）+ `1.5 mm`（亚克力）+ `15.0 mm`（前垫条）+ `3.0 mm`（桦木中层板）+ `3.5 mm`（后部丝带留空）+ `3.0 mm`（背板）+ `1.5 mm`（锁定卡槽）+ `3.5 mm`（实木后唇边）= **总厚 `35.0 mm`**。
+2. **内壁锁定卡槽 (`KERF`)**：
+   * 位于背板正后方（**`Y = 30.0 ~ 31.5 mm`**），**槽宽 `1.5 mm` × 槽深 `2.5 mm`**（配 `1.0 mm` 厚旋转锁片，留有 `0.5 mm` 旋转余量，锁片旋入槽内咬合 `1.7 mm`）。
+   * 卡槽外侧仍保留 **`7.5 mm` 厚实木框壁**（`10.0 - 2.5 = 7.5 mm`），卡槽后方保留 **`3.5 mm` 厚实木后唇边**（`Y = 31.5 ~ 35.0 mm`），确保结构坚固不崩边。
+3. **加工工序建议**：
+   * 由于内槽与前窗口均为 `90°` 直角，建议在 **45°斜切拼框前**，先在长条直料上用立铣/四面刨一次加工好 **`5.0 × 31.0 mm` 内止口台阶**、**`R6.0` 正面外圆弧** 以及 **`1.5 × 2.5 mm` 内侧卡槽**（使用标准 `1.5 mm` 锯片铣刀即可，无需定制异形刀模）。
+   * 45°斜切拼框并插好8片角部榫片后，再用 CNC 或靠模修边机铣出四角 **`R10.0 mm` 外圆角** 并打磨涂装。
+4. **五金固定注意**：背板为 `3.0 mm` MDF，6个旋转锁扣与2个D形挂扣必须采用 **半空心铆钉气动铆接**，不得使用木螺丝以免刺穿背板。
+
+---
+
+## User (2026-11-20T09:36:51Z)
+
+<USER_REQUEST>
+why 前唇厚 4.0, not 3.0? 
+and please change ribbon holes to 45mm wide 3mm height
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-20T19:36:51+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Gemini 4 Hydrogen (High) to Orchestrator (Argon). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+
+---
+
+### Assistant (2026-11-20T09:37:57Z)
+
+Restored `LIP_DEPTH = 3.0 mm`, `BACK_LIP_T = 3.0 mm`, and `REAR_SPACER_T = 5.0 mm` (`35.0 mm` total frame depth), and widened all 8 mid-board ribbon slots to **`45.0 × 3.0 mm`**. Waiting for the solid validation and STEP export to finish.
+Updated **`medal_8_sq`** in [src_medal_8_sq/lib/dims.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/lib/dims.py#L26-L67):
+
+1. **Why Front Lip Was `4.0 mm`**: In the earlier DFM adjustment (`adjust the thickness of the wall and the front lips for production`), the front lip depth was bumped from `3.0 mm` to `4.0 mm` for extra stiffness. Since the radial lip overhang is only `5.0 mm` (`3.0 mm` spacer + `2.0 mm` visible lip), **`3.0 mm` depth is already sturdy enough for walnut**, so I restored:
+   - **`LIP_DEPTH = 3.0 mm`** (`Y = 0.00 – 3.00`)
+   - **`BACK_LIP_T = 3.0 mm`** (`Y = 32.00 – 35.00`)
+   - **`REAR_SPACER_T = 5.0 mm`** (`Y = 23.50 – 28.50`, keeping total `FRAME_DEPTH = 35.0 mm`)
+2. **Ribbon Holes (`SLOT_WIDTH × SLOT_HEIGHT`)**: Changed from `28.0 × 3.0 mm` to **`45.0 × 3.0 mm`** on `mid_board`.
+
+Waiting for `task-643` to finish validation and STEP export so I can open the updated viewer.
+
+---
+
+### Assistant (2026-11-20T09:38:19Z)
+
+All validation checks passed (`0` invalid solids across all `55` parts), STEP files are re-exported, and the updated viewer is open:
+
+- **Front & Back Lips (`3.0 mm`)**: `LIP_DEPTH = 3.0 mm` (`Y = [0.00, 3.00]`), `BACK_LIP_T = 3.0 mm` (`Y = [32.00, 35.00]`), `REAR_SPACER_T = 5.0 mm` (`Y = [22.50, 27.50]` open rear space), keeping `FRAME_DEPTH = 35.0 mm` (`414.0 × 35.0 × 276.0 mm` frame, `414.0 × 39.17 × 276.0 mm` total bounds).
+- **Mid-Board Ribbon Slots**: Widened to **`45.0 × 3.0 mm`** (`8` horizontal slots, `Y = [19.50, 22.50]`).
+- **Updated STEP Exports**: [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) and `exports/medal_8_sq_parts/*.step`.
+- **Viewer**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+
+---
+
+## User (2026-11-20T09:40:02Z)
+
+<USER_REQUEST>
+make step files without medal
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-20T19:40:02+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Orchestrator (Argon) to Gemini 4 Hydrogen (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+
+---
+
+### Assistant (2026-11-20T09:40:14Z)
+
+The latest STEP files for **`medal_8_sq`** (without medals or ribbons) are freshly exported and ready in `exports/`:
+
+### Full Assembly (No Medals)
+- [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) (`1.8 MB`)
+
+### Separated Production Part STEP Files (`exports/medal_8_sq_parts/`)
+- [hardwood_frame.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_parts/hardwood_frame.step) (`861 KB`) — Walnut outer frame (`414 × 276 × 35 mm`, `15 mm` face, `R10` outer corners, `R6` front edge fillet, `3 mm` front/back lips, `1.5 × 2.5 mm` locking kerf, 8 corner splines)
+- [acrylic_cover.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_parts/acrylic_cover.step) (`18 KB`) — `393.6 × 255.6 × 1.5 mm` clear PMMA acrylic sheet
+- [front_spacer.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_parts/front_spacer.step) (`66 KB`) — `3.0 × 15.0 mm` 4-piece square-cut butt-jointed front spacer
+- [mid_board.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_parts/mid_board.step) (`279 KB`) — `393.6 × 255.6 × 3.0 mm` mid-board with 8× `45.0 × 3.0 mm` ribbon slots
+- [backboard.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_parts/backboard.step) (`18 KB`) — `393.4 × 255.4 × 3.0 mm` MDF backboard
+- [rear_hardware.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_parts/rear_hardware.step) (`546 KB`) — 6× `1.0 mm` turning locks + 2× D-ring strap hangers
+
+---
+
+## User (2026-11-20T09:45:21Z)
+
+<USER_REQUEST>
+calculate the sizes if add one more row, ie. 4 medals x 3 rows total 12 medals
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-20T19:45:21+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-20T09:45:35Z)
+
+Adding 1 extra row (`4 columns × 3 rows = 12 medals`) to the current `medal_8_sq` spec adds exactly **`1 × ROW_PITCH = +105.0 mm`** to the height (`73.0` medal + `15.0` visible ribbon + `3.0` slot + `14.0` row gap), while width (`414.0 mm`) and depth (`35.0 mm`) stay unchanged:
+
+| Component / Dimension | Current (`2×4 = 8 medals`) | With +1 Row (`3×4 = 12 medals`) | Change |
+| :--- | :--- | :--- | :---: |
+| **Outer Frame** (`W × H × D`) | `414.0 × 276.0 × 35.0 mm` | **`414.0 × 381.0 × 35.0 mm`** | `+105.0 mm` H |
+| **Visible Opening** (`OPEN_W × OPEN_H`) | `384.0 × 246.0 mm` | **`384.0 × 351.0 mm`** | `+105.0 mm` H |
+| **Inner Rabbet Cavity** (`CAVITY`) | `394.0 × 256.0 × 32.0 mm` | **`394.0 × 361.0 × 32.0 mm`** | `+105.0 mm` H |
+| **Acrylic Cover** (`acrylic_cover`) | `393.6 × 255.6 × 1.5 mm` | **`393.6 × 360.6 × 1.5 mm`** | `+105.0 mm` H |
+| **Mid-Board** (`mid_board`) | `393.6 × 255.6 × 3.0 mm` (`8` slots) | **`393.6 × 360.6 × 3.0 mm`** (**`12` slots** `45×3 mm`) | `+105.0 mm` H, `+4` slots |
+| **Front Spacer — Side Bars** (×2) | `3.0 × 15.0 × 255.6 mm` | **`3.0 × 15.0 × 360.6 mm`** | `+105.0 mm` H |
+| **Front Spacer — Top/Bottom** (×2) | `387.6 × 15.0 × 3.0 mm` | **`387.6 × 15.0 × 3.0 mm`** | Unchanged |
+| **Backboard** (`backboard`) | `393.4 × 255.4 × 3.0 mm` | **`393.4 × 360.4 × 3.0 mm`** | `+105.0 mm` H |
+| **Hanger Height** (`HANGER_Z`, 2/3 H) | `184.0 mm` | **`254.0 mm`** | `+70.0 mm` |
+| **Side Turn-Lock Height** | `138.0 mm` (center) | **`190.5 mm`** (center) *(or 2 per side)* | `+52.5 mm` |
+
+*(Let me know if you want me to create this `3×4` 12-medal variant and export its STEP files.)*
+
+---
+
+## User (2026-11-20T09:55:27Z)
+
+<USER_REQUEST>
+no, base on the 4x2, to make 4x3rows, extend the height of the frame and keep the padding and spacing the same.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-20T19:55:27+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_8_sq/acrylic_cover.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-20T09:56:30Z)
+
+Built **`medal_12_sq`** (`4 × 3 = 12 medals`) in `src_medal_12_sq/` based on `medal_8_sq` (`414.0 × 381.0 × 35.0 mm` frame, keeping `25.0 mm` padding and `14.0 mm` spacing identical). Waiting for the interference check and STEP export to finish.
+
+---
+
+### Assistant (2026-11-20T09:56:59Z)
+
+Created **`medal_12_sq`** (`4 columns × 3 rows = 12 medals`) in [src_medal_12_sq/medal_12_sq.py](file:///Users/rmac/AntiGravity/Frame/src_medal_12_sq/medal_12_sq.py) based on the `4×2` spec in `src_medal_8_sq/`, extending only the height while keeping the `25.0 mm` padding, `14.0 mm` medal gaps, `15.0 mm` frame side width, and `35.0 mm` depth stack identical:
+
+### Dimensions & Verification (`63` parts, `0` invalid, `0.000000 mm³` overlap)
+- **Outer Frame**: `414.0 × 381.0 × 35.0 mm` (`39.17 mm` total depth with D-rings; `+105.0 mm` height vs `medal_8_sq`)
+- **Visible Opening**: `384.0 × 351.0 mm` (`4 cols × 3 rows`, `25.0 mm` padding, `14.0 mm` spacing)
+- **Acrylic Cover**: `393.6 × 360.6 × 1.5 mm`
+- **Front Spacer**: `3.0 × 15.0 mm` butt-jointed (`2× 360.6 mm` sides, `2× 387.6 mm` top/bottom)
+- **Mid-Board**: `393.6 × 360.6 × 3.0 mm` with `12` slots (`45.0 × 3.0 mm`)
+- **Backboard**: `393.4 × 360.4 × 3.0 mm` (`5.0 mm` open rear space, `1.5 mm` kerf, `3.0 mm` back lip)
+- **Interference**: **`0.000000 mm³`** overlap across all internal layers and `rear_hardware`
+
+### Exported STEP Files (Without Medals) & Viewer
+- **Full Assembly (No Medals)**: [medal_12_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_12_sq_no_medals.step)
+- **Separated Production Parts**: `exports/medal_12_sq_parts/` (`hardwood_frame.step`, `acrylic_cover.step`, `front_spacer.step`, `mid_board.step`, `backboard.step`, `rear_hardware.step`)
+- **Viewer**: [http://127.0.0.1:3245/52e6c7b7-8e38-51a6-936b-e16a988664e8?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/52e6c7b7-8e38-51a6-936b-e16a988664e8?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+
+---
+
+## User (2026-11-20T09:58:06Z)
+
+<USER_REQUEST>
+yes , give the the spec
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-20T19:58:06+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_12_sq/lib/dims.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-20T09:58:06Z)
+
+以下为 **`medal_12_sq`（4列 × 3行 = 12枚奖牌展示框）完整生产工艺及尺寸规格书**（可直接配合 [medal_12_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_12_sq_no_medals.step) 及 `exports/medal_12_sq_parts/` 发给1688工厂报价与打样）：
+
+---
+
+### 北美黑胡桃实木 12枚奖牌展示框（`medal_12_sq`）生产技术规格书
+
+#### 一、 整体外框规格
+* **成品外框尺寸**：**`414.0 × 381.0 × 35.0 mm`**（宽 × 高 × 深；含背面D形挂扣总深约 `39.2 mm`）
+* **正面可视窗口**：**`384.0 × 351.0 mm`**（内框为 `90°` 直角，无内侧弧形装饰槽）
+* **正面单边框宽**：**`15.0 mm`**（其中外侧实木壁厚 `10.0 mm` + 内部前垫条宽 `3.0 mm` + 正面实木前唇边露出 `2.0 mm`，即正面总压边槽宽 `5.0 mm`）
+* **外框四角及前边倒角**：
+  * 四角外圆角：**`R10.0 mm`**（与 `10.0 mm` 壁厚同心过渡，保证转角壁厚均匀）
+  * 正面外沿圆弧倒角：**`R6.0 mm`**（正面保留 `9.0 mm` 平整框面）
+* **奖牌排布规格**：**3行 × 4列共 12枚**（单枚奖牌按 `Ø73 × 5 mm`、丝带宽 `25 mm`、牌间距 `14.0 mm`、距内框四边边距 `25.0 mm` 设计）
+
+---
+
+#### 二、 从前到后各层结构与材质清单（BOM）
+
+| 序号 | 零件名称 | 数量 | 精准尺寸规格 (mm) | 材质与表面处理 | 工艺及装配说明 |
+| :---: | :--- | :---: | :--- | :--- | :--- |
+| **1** | **实木外框**<br>(`hardwood_frame`) | 1套<br>(4条拼框) | 外径 **`414.0 × 381.0 × 35.0`**<br>内槽 **`394.0 × 361.0 × 深32.0`**<br>壁厚 **`10.0`**，前唇厚 **`3.0`** | **100% 北美黑胡桃纯实木 (FAS级)**<br>180–320#打磨，哑光木蜡油或哑光清漆 | 45°斜切拼角；内槽四角为 `90°` 直角；正面外边 `R6.0` 圆角，四角外径 `R10.0` |
+| **2** | **角部加固榫片**<br>(`corner_splines`) | 8片<br>(每角2片) | 厚 **`3.2`**，斜向深 **`10.5`**（从理论尖角起算，距内槽留有 `3.6 mm` 实木不穿透） | **深
+<truncated 1517 bytes>
+1.0 × 9.0 × 厚 1.0`** | **枪灰色/镀锌冲压铁片（1.0mm厚）+ 铆钉** | **铆接于背板背面**（上下各2个 `X = ±110.0 mm`，左右各1个 `Z = 190.5 mm`），铆钉中心距背板边 **`19.0 mm`** |
+| **9** | **D形挂扣**<br>(`wall_hanger`) | 2套 | 挂片 `10 × 30 × 1.6` + D环 | **枪灰色/镀锌重型金属挂件 + 铆钉** | **铆接于背板左右两侧**（中心距背板左右边 `22.0 mm`，高度 `Z = 254.0 mm` 即框高 `2/3` 处） |
+
+---
+
+#### 三、 外框关键尺寸与卡槽加工要求
+
+1. **深度方向（`Y = 0 → 35.0 mm`）完整叠加关系**：
+   * `3.0 mm`（实木前唇边）+ `1.5 mm`（亚克力）+ `15.0 mm`（前垫条）+ `3.0 mm`（桦木中层板）+ `5.0 mm`（后部丝带留空）+ `3.0 mm`（背板）+ `1.5 mm`（锁定卡槽）+ `3.0 mm`（实木后唇边）= **总厚 `35.0 mm`**。
+2. **内壁锁定卡槽 (`KERF`)**：
+   * 位于背板正后方（**`Y = 30.5 ~ 32.0 mm`**），**槽宽 `1.5 mm` × 槽深 `2.5 mm`**（配 `1.0 mm` 厚旋转锁片，留有 `0.5 mm` 旋转余量，锁片旋入槽内咬合 `1.7 mm`）。
+   * 卡槽外侧保留 **`7.5 mm` 厚实木框壁**（`10.0 - 2.5 = 7.5 mm`），卡槽后方保留 **`3.0 mm` 厚实木后唇边**（`Y = 32.0 ~ 35.0 mm`）。
+3. **加工工序建议**：
+   * 由于内槽与前窗口均为 `90°` 直角，建议在 **45°斜切拼框前**，先在长条直料上用立铣/四面刨一次加工好 **`5.0 × 32.0 mm` 内止口台阶**、**`R6.0` 正面外圆弧** 以及 **`1.5 × 2.5 mm` 内侧卡槽**（使用标准 `1.5 mm` 锯片铣刀即可，无需定制异形刀模）。
+   * 45°斜切拼框并插好8片角部榫片后，再用 CNC 或靠模修边机铣出四角 **`R10.0 mm` 外圆角** 并打磨涂装。
+4. **五金固定注意**：背板为 `3.0 mm` MDF，6个旋转锁扣与2个D形挂扣必须采用 **半空心铆钉气动铆接**，不得使用木螺丝以免刺穿背板。
+5. **包装要求**：单片独立透明袋 + 四角加厚 EPE 珍珠棉护角 + 五层加厚瓦楞防摔电商外箱。
+
+---
+
+## User (2026-11-20T13:26:12Z)
+
+<USER_REQUEST>
+calculate another size, which is 5 columns x 3 rows, how big is the new size?
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-20T23:26:12+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_12_sq/lib/dims.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-20T13:26:29Z)
+
+Adding 1 extra column (`5 columns × 3 rows = 15 medals`) to the `medal_12_sq` (`4×3`) spec adds exactly **`1 × COL_PITCH = +87.0 mm`** to the width (`73.0` medal + `14.0` horizontal gap), while height (`381.0 mm`) and depth (`35.0 mm`) stay unchanged:
+
+| Component / Dimension | `4×3` (12 medals) | `5×3` (15 medals) | Change |
+| :--- | :--- | :--- | :---: |
+| **Outer Frame (`W × H × D`)** | `414.0 × 381.0 × 35.0 mm` | **`501.0 × 381.0 × 35.0 mm`** | `+87.0 mm` W |
+| **Visible Opening (`OPEN_W × OPEN_H`)** | `384.0 × 351.0 mm` | **`471.0 × 351.0 mm`** | `+87.0 mm` W |
+| **Inner Rabbet Cavity (`CAVITY`)** | `394.0 × 361.0 × 32.0 mm` | **`481.0 × 361.0 × 32.0 mm`** | `+87.0 mm` W |
+| **Acrylic Cover** (`acrylic_cover`) | `393.6 × 360.6 × 1.5 mm` | **`480.6 × 360.6 × 1.5 mm`** | `+87.0 mm` W |
+| **Mid-Board** (`mid_board`) | `393.6 × 360.6 × 3.0 mm` (`12` slots) | **`480.6 × 360.6 × 3.0 mm`** (**`15` slots** `45×3 mm`) | `+87.0 mm` W, `+3` slots |
+| **Front Spacer — Side Bars** (×2) | `3.0 × 15.0 × 360.6 mm` | **`3.0 × 15.0 × 360.6 mm`** | Unchanged |
+| **Front Spacer — Top/Bottom** (×2) | `387.6 × 15.0 × 3.0 mm` | **`474.6 × 15.0 × 3.0 mm`** | `+87.0 mm` W |
+| **Backboard** (`backboard`) | `393.4 × 360.4 × 3.0 mm` | **`480.4 × 360.4 × 3.0 mm`** | `+87.0 mm` W |
+
+*(Tip: At `501 mm` wide, you may want `3` turn locks along the top and bottom edges—e.g. `X = -160, 0, +160 mm`—instead of `2` to prevent middle sag on the `3 mm` MDF backboard. Let me know if you'd like me to build this `5×3` variant and export its STEP files.)*
+
+---
+
+## User (2026-11-22T02:13:43Z)
+
+<USER_REQUEST>
+can you make svg files for the mid_board for lasercut, medal_8_sq and medal_12_sq
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-22T12:13:43+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/src_medal_12_sq/mid_board.py (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_medal_12_sq/lib/dims.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-22T02:14:15Z)
+
+Generated 1:1 millimeter-scale laser-cut SVG files for both `mid_board` variants in `exports/`:
+
+### Exported Laser-Cut SVG Files
+1. **`medal_8_sq` (`2 × 4`)**: [medal_8_sq_mid_board_lasercut.svg](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_mid_board_lasercut.svg)
+   - **Sheet Size**: `393.6 × 255.6 mm`
+   - **Cutouts**: `8` ribbon slots (`45.0 × 3.0 mm`, `R1.0 mm` corners)
+2. **`medal_12_sq` (`3 × 4`)**: [medal_12_sq_mid_board_lasercut.svg](file:///Users/rmac/AntiGravity/Frame/exports/medal_12_sq_mid_board_lasercut.svg)
+   - **Sheet Size**: `393.6 × 360.6 mm`
+   - **Cutouts**: `12` ribbon slots (`45.0 × 3.0 mm`, `R1.0 mm` corners)
+
+### Laser-Cut Layer Setup (LightBurn / RDWorks Ready)
+- **Scale**: True `1:1 mm` (`width`, `height`, and `viewBox` in `mm`, hairline `0.1 mm` stroke, `fill="none"`).
+- **Cut Order / Color Layers**:
+  - **Red (`#FF0000`, `inner_slots`)**: Internal ribbon slots (cut first).
+  - **Blue (`#0000FF`, `outer_cut`)**: Outer rectangular perimeter (cut last).
+- **Orientation**: Right-side-up front view (`row 2` / `row 3` at the top, leaving the medal drop space below each slot).
+
+---
+
+## User (2026-11-22T02:16:18Z)
+
+<USER_REQUEST>
+and svg for 5 medals mid board
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-22T12:16:18+10:00.
+
+The user's current state is as follows:
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src_medal_12_sq/mid_board.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-22T02:16:33Z)
+
+Generated 1:1 mm laser-cut SVG files for both the **5-medal (`1 × 5`)** and **5-column (`3 × 5 = 15 medals`)** `mid_board` layouts using the same `25.0 mm` padding, `14.0 mm` spacing, and `45.0 × 3.0 mm` (`R1.0`) slots:
+
+1. **5-Medal (`1 row × 5 cols`)**: [medal_5_sq_mid_board_lasercut.svg](file:///Users/rmac/AntiGravity/Frame/exports/medal_5_sq_mid_board_lasercut.svg)
+   - **Sheet Size**: `480.6 × 150.6 mm` (`5` slots; fits a `501.0 × 171.0 × 35.0 mm` outer frame)
+2. **15-Medal (`3 rows × 5 cols`)**: [medal_15_sq_mid_board_lasercut.svg](file:///Users/rmac/AntiGravity/Frame/exports/medal_15_sq_mid_board_lasercut.svg)
+   - **Sheet Size**: `480.6 × 360.6 mm` (`15` slots; fits the `501.0 × 381.0 × 35.0 mm` outer frame)
+
+*(Both SVGs use true `1:1 mm` scale, `#FF0000` red `inner_slots` cut first, and `#0000FF` blue `outer_cut` cut last.)*
+
+---
+
+## User (2026-11-22T13:43:27Z)
+
+<USER_REQUEST>
+hardwood_frame wall change from 10mm to 9mm, thickness change from 35mm to 46 mm, and the lips is 15mm wide, now i just need to keep the 8 medals and 15medals frame. give me their component measures
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-22T23:43:27+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_15_sq_mid_board_lasercut.svg (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src_medal_12_sq/mid_board.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-22T13:43:54Z)
+
+Here are the exact component measurements for both the **8-medal (`4 × 2`)** and **15-medal (`5 × 3`)** frames with **`9.0 mm` walnut wall**, **`15.0 mm` front face width** (`9.0` wall + `3.0` spacer + `3.0` visible lip overhang), and **`46.0 mm` total frame thickness** (no files modified yet):
+
+---
+
+### 1. Component Measures (`W × H × D`)
+
+| Component | **8 Medals (`4 cols × 2 rows`)** | **15 Medals (`5 cols × 3 rows`)** | Notes |
+| :--- | :--- | :--- | :--- |
+| **Outer Frame (`hardwood_frame`)** | **`414.0 × 276.0 × 46.0 mm`** | **`501.0 × 381.0 × 46.0 mm`** | `15.0 mm` face width, `9.0 mm` outer wall, `R9.0` outer corners, `R6.0` front fillet |
+| **Visible Opening (`OPEN_W × OPEN_H`)** | **`384.0 × 246.0 mm`** | **`471.0 × 351.0 mm`** | `25.0 mm` outer padding, `14.0 mm` medal gaps (`Ø73 mm` medals) |
+| **Rabbet Cavity (`CAVITY`)** | **`396.0 × 258.0 × 43.0 mm`** | **`483.0 × 363.0 × 43.0 mm`** | `90°` square inner corners (`+2.0 mm` W/H vs `10 mm` wall) |
+| **Acrylic Cover (`acrylic_cover`)** | **`395.6 × 257.6 × 1.5 mm`** | **`482.6 × 362.6 × 1.5 mm`** | `0.2 mm` clearance per side |
+| **Front Spacer — Side Bars (×2)** | **`3.0 × D × 257.6 mm`** | **`3.0 × D × 362.6 mm`** | Full height, square-cut (`D` = front spacer depth, see below) |
+| **Front Spacer — Top/Bottom (×2)** | **`389.6 × D × 3.0 mm`** | **`476.6 × D × 3.0 mm`** | Cut short to fit between side bars |
+| **Mid-Board (`mid_board`)** | **`395.6 × 257.6 × 3.0 mm`** | **`482.6 × 362.6 × 3.0 mm`** | **`8` slots** (`8 medals`) / **`15` slots** (`15 medals`), each `45.0 × 3.0 mm` (`R1.0`) |
+| **Backboard (`backboard`)** | **`395.4 × 257.4 × 3.0 mm`** | **`482.4 × 362.4 × 3.0 mm`** | `0.3 mm` clearance per side |
+| **Locking Kerf (`KERF`)** | **`1.5 × 2.5 mm`** perimeter groove | **`1.5 × 2.5 mm`** perimeter groove | Leaves `6.5 mm` outer walnut wall (`9.0 - 2.5`) |
+| **Corner Splines (×8)** | **`3.2 mm` thick × `9.5 mm` depth** | **`3.2 mm` thick × `9.5 mm` depth** | Measured from sharp corner (`~3.2 mm` clear of cavity) |
+
+---
+
+### 2. Depth Stack for `46.0 mm` Total Thickness (`+11.0 mm` vs `35.0 mm`)
+
+Keeping the fixed structural layers unchanged (`3.0` front lip + `1.5` acrylic + `3.0` mid-board + `3.0` backboard + `1.5` kerf + `3.0` back lip = `15.0 mm`), the remaining **`31.0 mm`** is split between **front spacer depth (`D`)** and **rear open space**:
+- **If keeping `5.0 mm` rear space**: `FRONT_SPACER_T` (`D`) = **`26.0 mm`**
+- **If keeping `15.0 mm` front spacer**: Rear space = **`16.0 mm`** (or e.g. **`23.0 mm` front spacer + `8.0 mm` rear space**)
+
+*(Let me know how you want the `46.0 mm` depth split between `front_spacer` and the rear space—or if you want me to update the 3D CAD models, STEP exports, and laser-cut SVGs for these 8-medal and 15-medal specs.)*
+
+---
+
+## User (2026-11-22T13:59:56Z)
+
+<USER_REQUEST>
+3333
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-22T23:59:56+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_15_sq_mid_board_lasercut.svg (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src_medal_12_sq/mid_board.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-22T13:59:57Z)
+
+It looks like `"3333"` may have been sent by mistake—could you clarify what you'd like to do next?
+
+For example, let me know:
+1. How you'd like the **`46.0 mm`** total depth split between **`front_spacer`** and the **rear space** (e.g., `26.0 mm` front spacer + `5.0 mm` rear space, or `15.0 mm` front spacer + `16.0 mm` rear space), and
+2. Whether you'd like me to build the updated **8-medal** and **15-medal** CAD models, export their **STEP files**, and update the **laser-cut SVGs**.
+
+---
+
+## User (2026-11-22T14:03:37Z)
+
+<USER_REQUEST>
+the back board will be 15mm, no turning lock and kerf, 1mm lip, Acrylic Cover 2mm
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-23T00:03:37+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_15_sq_mid_board_lasercut.svg (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src_medal_12_sq/mid_board.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+## User (2026-11-22T14:03:54Z)
+
+<USER_REQUEST>
+the back board will be 15mm, no turning lock and kerf, 1mm back lip, Acrylic Cover 2mm
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-23T00:03:54+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_15_sq_mid_board_lasercut.svg (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src_medal_12_sq/mid_board.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+## User (2026-11-22T14:04:15Z)
+
+<USER_REQUEST>
+the back board will be 15mm, no turning lock and kerf, 1mm back lip, 6mm front lip, Acrylic Cover 2mm
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-23T00:04:15+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_15_sq_mid_board_lasercut.svg (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src_medal_12_sq/mid_board.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-22T14:06:05Z)
+
+Updated **`medal_8_sq`** (`src_medal_8_sq/`) and created **`medal_15_sq`** (`src_medal_15_sq/`) with the new `46.0 mm` frame thickness (`6.0 mm` front lip + `2.0 mm` acrylic + `15.0 mm` front spacer + `3.0 mm` mid-board + `4.0 mm` rear space + `15.0 mm` backboard + `1.0 mm` back inset, no turning locks or kerf, `9.0 mm` outer wall, `15.0 mm` face width). Waiting for both builds to finish.
+
+---
+
+### Assistant (2026-11-22T14:06:40Z)
+
+Running full validation, STEP export (without medals), and 1:1 mm laser-cut SVG generation for both **`medal_8_sq`** and **`medal_15_sq`**. Waiting for the export and viewer launch to complete.
+Updated both **`medal_8_sq`** (`src_medal_8_sq/`) and **`medal_15_sq`** (`src_medal_15_sq/`) to the new **`46.0 mm`** frame depth specification (`9.0 mm` outer walnut wall, `15.0 mm` face width, `6.0 mm` front lip, `2.0 mm` acrylic, `15.0 mm` front spacer, `3.0 mm` mid-board, `4.0 mm` rear space, `15.0 mm` backboard, `1.0 mm` back lip/inset, no turning locks or locking kerf). Waiting for `task-730` to complete the collision verification, STEP/SVG exports, and viewer launch.
+
+---
+
+### Assistant (2026-11-22T14:07:04Z)
+
+Updated both **`medal_8_sq`** ([src_medal_8_sq/medal_8_sq.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/medal_8_sq.py)) and **`medal_15_sq`** ([src_medal_15_sq/medal_15_sq.py](file:///Users/rmac/AntiGravity/Frame/src_medal_15_sq/medal_15_sq.py)) to the **`46.0 mm`** frame depth specification, verified `0` invalid solids and **`0.000000 mm³`** overlap across all parts, updated the STEP and laser-cut SVG exports, and opened both viewers:
+
+---
+
+### 1. Updated Depth Stack (`46.0 mm` Total Frame Depth)
+| Layer | Thickness (mm) | `Y` Depth Range (mm) | Notes |
+| :--- | :---: | :---: | :--- |
+| **Front Lip** (`LIP_DEPTH`) | **`6.0`** | `0.00 – 6.00` | `15.0 mm` face width (`9.0` wall + `3.0` spacer + `3.0` visible overhang) |
+| **Acrylic Cover** (`ACRYLIC_T`) | **`2.0`** | `6.00 – 8.00` | Clear PMMA |
+| **Front Spacer** (`FRONT_SPACER_T`) | **`15.0`** | `8.00 – 23.00` | `3.0 × 15.0 mm` square-cut butt-jointed (`10.0 mm` air gap before `5.0 mm` medals) |
+| **Mid-Board** (`MID_BOARD_T`) | **`3.0`** | `23.00 – 26.00` | Light birch/ash plywood with `45.0 × 3.0 mm` (`R1.0`) slots |
+| **Rear Space** (`REAR_SPACER_T`) | **`4.0`** | `26.00 – 30.00` | Empty cavity behind `mid_board` (`1.60 mm` clear behind `2.40 mm` ribbon bend) |
+| **Backboard** (`BACKBOARD_T`) | **`15.0`** | `30.00 – 45.00` | Recessed **`1.0 mm`** from the back face (no turning locks, no locking kerf) |
+| **Back Lip / Inset** | **`1.0`** | `45.00 – 46.00` | `1.0 mm` recess at rear of frame |
+| **Rear Hardware** (`2×` D-rings) | `8.38` | `45.00 – 53.38` | Mounted on the `15.0 mm` backboard (`total bounds D = 53.67 mm`) |
+
+---
+
+### 2. Verified Component Measures (`W × H × D`)
+
+| Component | **8 Medals (`4 × 2`)** | **15 Medals (`5 × 3`)** |
+| :--- | :--- | :--- |
+| **Outer Frame** (`hardwood_frame`) | **`414.0 × 276.0 × 46.0 mm`** | **`501.0 × 381.0 × 46.0 mm`** |
+| **Visible Opening** | **`384.0 × 246.0 mm`** | **`471.0 × 351.0 mm`** |
+| **Rabbet Cavity** | **`396.0 × 258.0 × 40.0 mm`** | **`483.0 × 363.0 × 40.0 mm`** |
+| **Acrylic Cover** | **`395.6 × 257.6 × 2.0 mm`** | **`482.6 × 362.6 × 2.0 mm`** |
+| **Front Spacer — Side Bars (×2)** | **`3.0 × 257.6 × 15.0 mm`** | **`3.0 × 362.6 × 15.0 mm`** |
+| **Front Spacer — Top/Bottom (×2)** | **`389.6 × 3.0 × 15.0 mm`** | **`476.6 × 3.0 × 15.0 mm`** |
+| **Mid-Board** | **`395.6 × 257.6 × 3.0 mm`** (`8` slots) | **`482.6 × 362.6 × 3.0 mm`** (`15` slots) |
+| **Backboard** | **`395.4 × 257.4 × 15.0 mm`** | **`482.4 × 362.4 × 15.0 mm`** |
+| **Corner Splines (×8)** | `3.2 mm` thick × `9.5 mm` depth (`Y = 15.0, 32.0`) | `3.2 mm` thick × `9.5 mm` depth (`Y = 15.0, 32.0`) |
+
+---
+
+### 3. Exports & Live Viewers
+- **8-Medal (`medal_8_sq`)**:
+  - STEP (no medals): [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) + `exports/medal_8_sq_parts/`
+  - Laser-Cut Mid-Board SVG: [medal_8_sq_mid_board_lasercut.svg](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_mid_board_lasercut.svg)
+  - Viewer: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+- **15-Medal (`medal_15_sq`)**:
+  - STEP (no medals): [medal_15_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_15_sq_no_medals.step) + `exports/medal_15_sq_parts/`
+  - Laser-Cut Mid-Board SVG: [medal_15_sq_mid_board_lasercut.svg](file:///Users/rmac/AntiGravity/Frame/exports/medal_15_sq_mid_board_lasercut.svg)
+  - Viewer: [http://127.0.0.1:3245/21eb7ba5-8b0f-563b-939c-8b9a0c210686?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/21eb7ba5-8b0f-563b-939c-8b9a0c210686?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+
+---
+
+## User (2026-11-22T14:15:45Z)
+
+<USER_REQUEST>
+write these measure in md file
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-23T00:15:45+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_15_sq_mid_board_lasercut.svg (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src_medal_12_sq/mid_board.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Gemini 4 Hydrogen (High) to Gemini 4 Hydrogen (Medium). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+
+---
+
+### Assistant (2026-11-22T14:16:07Z)
+
+Created [component_measures.md](file:///Users/rmac/AntiGravity/Frame/docs/component_measures.md) with the complete depth stack, component dimensions (`W × H × D`), joinery specs, and export paths for both the **8-medal (`4 × 2`)** and **15-medal (`5 × 3`)** frames.
+
+---
+
+## User (2026-11-22T14:28:22Z)
+
+<USER_REQUEST>
+put the other models and their files into archive, update changes to github
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-23T00:28:22+10:00.
+
+The user's current state is as follows:
+Active Document: /Users/rmac/AntiGravity/Frame/exports/medal_15_sq_mid_board_lasercut.svg (LANGUAGE_UNSPECIFIED)
+Cursor is on line: 1
+Other open documents:
+- /Users/rmac/AntiGravity/Frame/src_medal_12_sq/mid_board.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/frame_moulding.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/lib/dims.py (LANGUAGE_UNSPECIFIED)
+- /Users/rmac/AntiGravity/Frame/src_corner2/medal_corner_2.py (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
+
+---
+
