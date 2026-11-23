@@ -2876,3 +2876,160 @@ Other open documents:
 
 ---
 
+### Assistant (2026-11-22T14:29:14Z)
+
+Archived the earlier model variants and pushed the updated repository to GitHub:
+
+- **Repository**: [https://github.com/rrrcdesign-dev/frame](https://github.com/rrrcdesign-dev/frame)
+- **Commit**: `411ac8e` (`main` branch, `73 files changed`)
+- **Active Models at Root**:
+  - [src_medal_8_sq/](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq) (`8-medal`, `414.0 × 276.0 × 46.0 mm`)
+  - [src_medal_15_sq/](file:///Users/rmac/AntiGravity/Frame/src_medal_15_sq) (`15-medal`, `501.0 × 381.0 × 46.0 mm`)
+  - [docs/component_measures.md](file:///Users/rmac/AntiGravity/Frame/docs/component_measures.md) & [docs/conversation.md](file:///Users/rmac/AntiGravity/Frame/docs/conversation.md)
+- **Moved to `archive/`**:
+  - `archive/src/`, `archive/src_back2/`, `archive/src_corner2/`, `archive/src_8_medal/`, `archive/src_medal_12_sq/`
+  - `archive/exports/` (old STEP/SVG exports for `8_medal`, `medal_12_sq`, `medal_5_sq`, and `medal_frame_back_2`, while keeping active `medal_8_sq` and `medal_15_sq` exports in `exports/`)
+
+---
+
+## User (2026-11-23T13:26:45Z)
+
+<USER_REQUEST>
+run the viewer
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-23T23:26:45+10:00.
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-23T13:27:47Z)
+
+Opened both active models in the `cad-server` viewer:
+
+- **8-Medal (`medal_8_sq`, `414 × 276 × 46 mm`)**: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+- **15-Medal (`medal_15_sq`, `501 × 381 × 46 mm`)**: [http://127.0.0.1:3245/21eb7ba5-8b0f-563b-939c-8b9a0c210686?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/21eb7ba5-8b0f-563b-939c-8b9a0c210686?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+
+---
+
+## User (2026-11-23T13:34:06Z)
+
+<USER_REQUEST>
+for both model, remove the rear hardware, change the mid board to 4mm, Back inset to 0 mm.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-23T23:34:06+10:00.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Gemini 4 Hydrogen (Medium) to Gemini 4 Hydrogen (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
+
+---
+
+### Assistant (2026-11-23T13:35:15Z)
+
+Updated both **`medal_8_sq`** (`src_medal_8_sq/`) and **`medal_15_sq`** (`src_medal_15_sq/`) to remove `rear_hardware`, increase `mid_board` thickness to **`4.0 mm`**, and set `BACKBOARD_REAR_INSET = 0.0 mm` (`backboard` flush at `Y = 46.0 mm`), and updated [component_measures.md](file:///Users/rmac/AntiGravity/Frame/docs/component_measures.md). Waiting for the collision check and STEP export to finish.
+
+---
+
+### Assistant (2026-11-23T13:35:55Z)
+
+Updated both **`medal_8_sq`** ([src_medal_8_sq/medal_8_sq.py](file:///Users/rmac/AntiGravity/Frame/src_medal_8_sq/medal_8_sq.py)) and **`medal_15_sq`** ([src_medal_15_sq/medal_15_sq.py](file:///Users/rmac/AntiGravity/Frame/src_medal_15_sq/medal_15_sq.py)) and [component_measures.md](file:///Users/rmac/AntiGravity/Frame/docs/component_measures.md):
+
+### Changes Applied to Both Models (`FRAME_DEPTH = 46.0 mm`)
+- **Rear Hardware Removed**: Removed `rear_hardware` from both assemblies (and deleted `rear_hardware.step` from `exports/`).
+- **Mid-Board (`MID_BOARD_T`)**: `3.0 mm` → **`4.0 mm`** (`Y = [23.00, 27.00]`).
+- **Back Inset (`BACKBOARD_REAR_INSET`)**: `1.0 mm` → **`0.0 mm`** (`15.0 mm` backboard sits flush with the back face of the frame at `Y = [31.00, 46.00]`).
+- **Updated Stack (`46.0 mm`)**: `6.0` (front lip) + `2.0` (acrylic) + `15.0` (front spacer) + **`4.0`** (mid-board) + `4.0` (open rear space) + `15.0` (backboard) + **`0.0`** (back inset) = **`46.0 mm`**.
+
+### Verification, Exports & Viewers
+- **`medal_8_sq` (`414.0 × 276.0 × 46.0 mm`)**: `35` parts, `0` invalid solids, **`0.000000 mm³`** interference (`frame & ...` and `medals & mid_board/backboard`).
+  - STEP: [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) + `exports/medal_8_sq_parts/`
+  - Viewer: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+- **`medal_15_sq` (`501.0 × 381.0 × 46.0 mm`)**: `49` parts, `0` invalid solids, **`0.000000 mm³`** interference (`frame & ...` and `medals & mid_board/backboard`).
+  - STEP: [medal_15_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_15_sq_no_medals.step) + `exports/medal_15_sq_parts/`
+  - Viewer: [http://127.0.0.1:3245/21eb7ba5-8b0f-563b-939c-8b9a0c210686?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/21eb7ba5-8b0f-563b-939c-8b9a0c210686?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+
+---
+
+## User (2026-11-23T13:45:44Z)
+
+<USER_REQUEST>
+the size of ribbon slot change to 45mm(include round corners) wide 2.5mm height, draw the mid_board cnc cdr files and svg files
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-23T23:45:44+10:00.
+</ADDITIONAL_METADATA>
+
+---
+
+### Assistant (2026-11-23T13:46:44Z)
+
+Updated both **`medal_8_sq`** and **`medal_15_sq`** to `45.0 × 2.5 mm` (`R1.0`) ribbon slots and rebuilt both models. Waiting for the collision verification and STEP/SVG/DXF exports to finish.
+Updated the ribbon slots to **`45.0 mm` wide (including `R1.0 mm` rounded corners) × `2.5 mm` high** in both **`medal_8_sq`** and **`medal_15_sq`**, updated [component_measures.md](file:///Users/rmac/AntiGravity/Frame/docs/component_measures.md), verified `0.000000 mm³` interference between the ribbons and the `4.0 mm` `mid_board`, and exported all manufacturing files:
+
+### 1. Mid-Board SVG & CNC Files (`exports/`)
+
+> **Note on `.cdr` format:** CorelDRAW `.cdr` is a proprietary closed format that cannot be written directly without CorelDRAW installed. Below are **1:1 mm `.dxf` (AutoCAD R2010)** and **1:1 mm `.svg`** files—both import at exact `1:1 mm` scale into **CorelDRAW** (where you can `Save As .cdr` if needed), **ArtCAM / JDSoft**, and **LightBurn**:
+
+- **8-Medal (`395.6 × 256.6 × 4.0 mm`, `8` slots `45.0 × 2.5 mm`, `R1.0`)**:
+  - Laser / Vector SVG: [medal_8_sq_mid_board_lasercut.svg](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_mid_board_lasercut.svg)
+  - CNC / CorelDRAW DXF: [medal_8_sq_mid_board_cnc.dxf](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_mid_board_cnc.dxf)
+- **15-Medal (`482.6 × 361.1 × 4.0 mm`, `15` slots `45.0 × 2.5 mm`, `R1.0`)**:
+  - Laser / Vector SVG: [medal_15_sq_mid_board_lasercut.svg](file:///Users/rmac/AntiGravity/Frame/exports/medal_15_sq_mid_board_lasercut.svg)
+  - CNC / CorelDRAW DXF: [medal_15_sq_mid_board_cnc.dxf](file:///Users/rmac/AntiGravity/Frame/exports/medal_15_sq_mid_board_cnc.dxf)
+
+*(Both DXF and SVG use separate layers: Red `INNER_SLOTS` for the `45 × 2.5 mm` cutouts first, and Blue `OUTER_CUT` for the outer sheet perimeter.)*
+
+---
+
+### 2. Updated STEP Exports & Viewers
+- **8-Medal (`414.0 × 275.0 × 46.0 mm` frame)**:
+  - STEP (no medals): [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) + `exports/medal_8_sq_parts/`
+  - Viewer: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+- **15-Medal (`501.0 × 379.5 × 46.0 mm` frame)**:
+  - STEP (no medals): [medal_15_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_15_sq_no_medals.step) + `exports/medal_15_sq_parts/`
+  - Viewer: [http://127.0.0.1:3245/21eb7ba5-8b0f-563b-939c-8b9a0c210686?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/21eb7ba5-8b0f-563b-939c-8b9a0c210686?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+
+---
+
+### Assistant (2026-11-23T13:47:54Z)
+
+Updated the ribbon slots to **`45.0 mm` wide (including `R1.0 mm` rounded corners) × `2.5 mm` high** in both **`medal_8_sq`** and **`medal_15_sq`**, updated [component_measures.md](file:///Users/rmac/AntiGravity/Frame/docs/component_measures.md), verified **`0.000000 mm³`** overlap between the ribbons and the `4.0 mm` `mid_board`, exported all STEP/SVG/DXF files, and opened both viewers:
+
+### 1. Mid-Board SVG & CNC Files (`exports/`)
+
+> **Note on `.cdr` format:** CorelDRAW `.cdr` is a proprietary closed format that cannot be written directly without CorelDRAW installed. Below are **1:1 mm `.dxf` (AutoCAD R2010)** and **1:1 mm `.svg`** files—both import at exact `1:1 mm` scale into **CorelDRAW** (where you can `Save As .cdr`), **ArtCAM / JDSoft**, and **LightBurn**:
+
+- **8-Medal (`395.6 × 256.6 × 4.0 mm`, `8` slots `45.0 × 2.5 mm`, `R1.0`)**:
+  - Vector SVG: [medal_8_sq_mid_board_lasercut.svg](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_mid_board_lasercut.svg) (`1.3 KB`)
+  - CNC / CorelDRAW DXF: [medal_8_sq_mid_board_cnc.dxf](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_mid_board_cnc.dxf) (`19.0 KB`)
+- **15-Medal (`482.6 × 361.1 × 4.0 mm`, `15` slots `45.0 × 2.5 mm`, `R1.0`)**:
+  - Vector SVG: [medal_15_sq_mid_board_lasercut.svg](file:///Users/rmac/AntiGravity/Frame/exports/medal_15_sq_mid_board_lasercut.svg) (`2.1 KB`)
+  - CNC / CorelDRAW DXF: [medal_15_sq_mid_board_cnc.dxf](file:///Users/rmac/AntiGravity/Frame/exports/medal_15_sq_mid_board_cnc.dxf) (`21.6 KB`)
+
+*(Both DXF and SVG separate Red `INNER_SLOTS` for the `45 × 2.5 mm` cutouts first, and Blue `OUTER_CUT` for the outer perimeter.)*
+
+---
+
+### 2. Updated STEP Exports & Viewers
+- **8-Medal (`414.0 × 275.0 × 46.0 mm` frame, `35` parts)**:
+  - STEP (no medals): [medal_8_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_8_sq_no_medals.step) + `exports/medal_8_sq_parts/`
+  - Viewer: [http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/51fa84ed-f4e8-5ebe-9b8c-75e47bbe3463?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+- **15-Medal (`501.0 × 379.5 × 46.0 mm` frame, `49` parts)**:
+  - STEP (no medals): [medal_15_sq_no_medals.step](file:///Users/rmac/AntiGravity/Frame/exports/medal_15_sq_no_medals.step) + `exports/medal_15_sq_parts/`
+  - Viewer: [http://127.0.0.1:3245/21eb7ba5-8b0f-563b-939c-8b9a0c210686?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI](http://127.0.0.1:3245/21eb7ba5-8b0f-563b-939c-8b9a0c210686?token=32503680000.DJGPUDLch6cTN1FLFJzmcmeOHz3ThJb28zoEj6dyoYI)
+
+---
+
+## User (2026-11-23T14:23:28Z)
+
+<USER_REQUEST>
+update files to git
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-24T00:23:28+10:00.
+</ADDITIONAL_METADATA>
+
+---
+

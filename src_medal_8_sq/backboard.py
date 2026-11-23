@@ -1,4 +1,4 @@
-"""15 mm removable MDF backboard recessed 1.0 mm from the back face of the frame."""
+"""15 mm removable MDF backboard flush with the back face of the frame."""
 
 import build123d as bd
 from cad import model

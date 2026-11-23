@@ -1,4 +1,4 @@
-"""3 mm light birch/ash-veneered plywood mid-board with 15 horizontal slots for medal ribbons."""
+"""4 mm light birch/ash-veneered plywood mid-board with 15 horizontal slots for medal ribbons."""
 
 import build123d as bd
 from cad import model

@@ -6,7 +6,6 @@ from cad import model
 from acrylic_cover import acrylic_cover
 from backboard import backboard
 from frame_moulding import hardwood_frame
-from hardware import rear_hardware
 from lib.dims import FRAME_OUTER_H, FRAME_OUTER_W
 from medals import medal_set
 from mid_board import mid_board
@@ -22,7 +21,6 @@ def medal_15_sq():
     medals = medal_set().shape
     mid = mid_board().shape
     back = backboard().shape
-    hw = rear_hardware().shape
 
     asm = bd.Compound(
         children=[
@@ -32,7 +30,6 @@ def medal_15_sq():
             medals,
             mid,
             back,
-            hw,
         ],
         label="medal_15_sq",
     )

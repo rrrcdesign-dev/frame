@@ -24,7 +24,7 @@ RIBBON_THICKNESS = 1.2
 RIBBON_VISIBLE_H = 15.0
 RIBBON_TAIL_H = 48.0
 SLOT_WIDTH = 45.0
-SLOT_HEIGHT = 3.0
+SLOT_HEIGHT = 2.5
 SLOT_CORNER_R = 1.0
 
 # Spacing & outer padding inside the visible frame opening
@@ -59,12 +59,12 @@ SPLINE_YS = (15.0, 32.0)
 # Stack thicknesses (front to back)
 ACRYLIC_T = 2.0
 FRONT_SPACER_T = 15.0
-MID_BOARD_T = 3.0
+MID_BOARD_T = 4.0
 REAR_SPACER_T = 4.0  # 4 mm empty rear space behind mid-board (rear_spacer part omitted)
 BACKBOARD_T = 15.0
 KERF_H = 0.0
-BACK_LIP_T = 1.0
-BACKBOARD_REAR_INSET = BACK_LIP_T  # 1.0 mm recess from back face of frame (no kerf)
+BACK_LIP_T = 0.0
+BACKBOARD_REAR_INSET = BACK_LIP_T  # flush with back face of frame (0 mm inset)
 
 FRAME_DEPTH = LIP_DEPTH + ACRYLIC_T + FRONT_SPACER_T + MID_BOARD_T + REAR_SPACER_T + BACKBOARD_T + BACKBOARD_REAR_INSET
 
