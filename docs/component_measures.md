@@ -1,6 +1,6 @@
 # Medal Frame Component Measurements (`8-Medal` & `15-Medal`)
 
-Updated production measurements for **`medal_8_sq`** (`4 cols × 2 rows`) and **`medal_15_sq`** (`5 cols × 3 rows`) with `46.0 mm` total frame depth, `9.0 mm` outer walnut wall, `15.0 mm` front face width, `4.0 mm` mid-board, `15.0 mm` backboard flush with the rear face (`0.0 mm` back inset), `2.0 mm` acrylic cover, and no rear hardware, turning locks, or locking kerf.
+Updated production measurements for **`medal_8_sq`** (`4 cols × 2 rows`) and **`medal_15_sq`** (`5 cols × 3 rows`) with `46.0 mm` total frame depth, `9.0 mm` outer walnut wall, `15.0 mm` front face width, `4.0 mm` mid-board, a two-layer bonded `15.0 mm` backboard (`4.0 mm` inner plywood + `11.0 × 15.0 mm` outer pinewood frame) flush with the rear face (`0.0 mm` back inset), `2.0 mm` acrylic cover, and no rear hardware, turning locks, or locking kerf.
 
 ---
 
@@ -13,7 +13,8 @@ Updated production measurements for **`medal_8_sq`** (`4 cols × 2 rows`) and **
 | **Front Spacer** (`FRONT_SPACER_T`) | **`15.0`** | `8.00 – 23.00` | `3.0 × 15.0 mm` square-cut butt-jointed (`10.0 mm` air gap before `5.0 mm` medals) |
 | **Mid-Board** (`MID_BOARD_T`) | **`4.0`** | `23.00 – 27.00` | Light birch/ash plywood with `45.0 × 2.5 mm` (`R1.0`) slots |
 | **Rear Space** (`REAR_SPACER_T`) | **`4.0`** | `27.00 – 31.00` | Open cavity behind `mid_board` (`2.60 mm` clear behind ribbon fold) |
-| **Backboard** (`BACKBOARD_T`) | **`15.0`** | `31.00 – 46.00` | Flush with rear face of frame (**`0.0 mm` back inset**; no rear hardware) |
+| **Backboard — Inner Plywood** (`BACKBOARD_PLY_T`) | **`4.0`** | `31.00 – 35.00` | Solid `4.0 mm` plywood inner sheet bonded to pinewood frame |
+| **Backboard — Outer Pine Frame** (`BACKBOARD_FRAME_T`) | **`11.0`** | `35.00 – 46.00` | `11.0 mm` depth × `15.0 mm` width pinewood sticks, flush at `Y = 46.0 mm` (`0.0 mm` inset) |
 
 ---
 
@@ -28,7 +29,9 @@ Updated production measurements for **`medal_8_sq`** (`4 cols × 2 rows`) and **
 | **Front Spacer — Side Bars (×2)** | **`3.0 × 256.6 × 15.0 mm`** | **`3.0 × 361.1 × 15.0 mm`** | Full height, square-cut |
 | **Front Spacer — Top/Bottom (×2)** | **`389.6 × 3.0 × 15.0 mm`** | **`476.6 × 3.0 × 15.0 mm`** | Cut short to fit between side bars |
 | **Mid-Board** (`mid_board`) | **`395.6 × 256.6 × 4.0 mm`** (`8` slots) | **`482.6 × 361.1 × 4.0 mm`** (`15` slots) | `45.0 × 2.5 mm` (`R1.0`) horizontal slots |
-| **Backboard** (`backboard`) | **`395.4 × 256.4 × 15.0 mm`** | **`482.4 × 360.9 × 15.0 mm`** | `0.3 mm` clearance per side, flush at `Y = 46.0 mm` |
+| **Backboard — Inner Plywood** (`backboard_plywood`) | **`395.4 × 256.4 × 4.0 mm`** | **`482.4 × 360.9 × 4.0 mm`** | `0.3 mm` clearance per side (`Y = 31.00 – 35.00`) |
+| **Backboard — Pine Top/Bottom (×2)** | **`395.4 × 15.0 × 11.0 mm`** | **`482.4 × 15.0 × 11.0 mm`** | Full width, `15.0 mm` stick width × `11.0 mm` depth (`Y = 35.00 – 46.00`) |
+| **Backboard — Pine Sides (×2)** | **`15.0 × 226.4 × 11.0 mm`** | **`15.0 × 330.9 × 11.0 mm`** | Cut to fit between top/bottom sticks, flush at `Y = 46.0 mm` |
 | **Corner Splines (×8)** | `3.2 mm` thick × `9.5 mm` depth | `3.2 mm` thick × `9.5 mm` depth | `Y = 15.0 mm` and `32.0 mm` (`~3.2 mm` clear of cavity) |
 
 ---

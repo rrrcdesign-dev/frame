@@ -20,11 +20,11 @@ def apply_spline_walnut(shape) -> None:
 
 
 def apply_veneer_plywood(shape) -> None:
-    """Apply satin light warm-yellow birch/ash veneer plywood finish to the slotted mid-board."""
-    mat = wood.birch()
+    """Apply satin very dark brown walnut-veneer plywood finish to the slotted mid-board."""
+    mat = wood.walnut()
     mat.pbr = mat.pbr.strip_maps().override(roughness=0.55)
     shape.material = mat
-    shape.color = "#D6B884"
+    shape.color = "#261710"
 
 
 def apply_spacer_mdf(shape) -> None:
@@ -41,6 +41,22 @@ def apply_backboard_mdf(shape) -> None:
     mat.pbr = mat.pbr.strip_maps().override(roughness=0.75)
     shape.material = mat
     shape.color = "#8E7358"
+
+
+def apply_backboard_plywood(shape) -> None:
+    """Apply warm plywood finish to the 4 mm inner backboard sheet."""
+    mat = wood.birch()
+    mat.pbr = mat.pbr.strip_maps().override(roughness=0.60)
+    shape.material = mat
+    shape.color = "#C8A878"
+
+
+def apply_backboard_pine(shape) -> None:
+    """Apply light natural pinewood finish to the 11 x 15 mm outer rear backboard frame."""
+    mat = getattr(wood, "pine", wood.birch)()
+    mat.pbr = mat.pbr.strip_maps().override(roughness=0.62)
+    shape.material = mat
+    shape.color = "#E3C598"
 
 
 def apply_acrylic(shape) -> None:
